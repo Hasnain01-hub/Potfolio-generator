@@ -1,158 +1,136 @@
 import React from "react";
-import "./assets/css/bootstrap.min.css";
-import "./assets/css/color/green.css";
-import "./assets/revolution/css/layers.css";
-import "./assets/revolution/css/navigation.css";
-import "./assets/revolution/css/settings.css";
-import sliderbg41 from "./assets/images/art/sliderbg41.jpg";
-import ctr1 from "./assets/images/art/cr1.jpg";
-import ctr2 from "./assets/images/art/cr2.jpg";
-import ctr3 from "./assets/images/art/cr3.jpg";
-import ctr4 from "./assets/images/art/cr4.jpg";
-import ctr5 from "./assets/images/art/cr5.jpg";
-import ctr6 from "./assets/images/art/cr6.jpg";
-import ctr7 from "./assets/images/art/cr7.jpg";
-import ctr8 from "./assets/images/art/cr8.jpg";
-import ctr9 from "./assets/images/art/cr9.jpg";
-import cr19 from "./assets/images/art/cr19.jpg";
-import about8 from "./assets/images/art/about8.jpg";
-import cr20 from "./assets/images/art/cr20.jpg";
-import cr21 from "./assets/images/art/cr21.jpg";
-import cr22 from "./assets/images/art/cr22.jpg";
-import cr23 from "./assets/images/art/cr23.jpg";
-import cr24 from "./assets/images/art/cr24.jpg";
-import cr25 from "./assets/images/art/cr25.jpg";
-import cr26 from "./assets/images/art/cr26.jpg";
-import cr27 from "./assets/images/art/cr27.jpg";
-import cr28 from "./assets/images/art/cr28.jpg";
-import cr29 from "./assets/images/art/cr29.jpg";
-import cr30 from "./assets/images/art/cr30.jpg";
-import cr31 from "./assets/images/art/cr31.jpg";
-import cr32 from "./assets/images/art/cr32.jpg";
-import cr33 from "./assets/images/art/cr33.jpg";
-import cr34 from "./assets/images/art/cr34.jpg";
-import './assets/style.css'
+import Footer from "../Footer";
 
 const Port1 = () => {
   return (
     <>
-      <div class="content-wrapper">
-        <nav class="navbar center wide transparent absolute dark-wrapper bg-opacity-dark inverse-text">
-          <div class="flex-it">
-            <div class="navbar-header align-left">
-              <div class="navbar-brand">
-                <a href="index9.html">
+      {" "}
+      <div className="content-wrapper">
+        <nav className="navbar center wide transparent absolute dark-wrapper bg-opacity-dark inverse-text">
+          <div className="flex-it">
+            <div className="navbar-header align-left">
+              <div className="navbar-brand">
+                <a href="#/">
                   <img
                     src="#"
-                    // srcset="style/images/logo2.png 1x, style/images/logo2@2x.png 2x"
+                    srcSet="
+              assets/images/logo2.png    1x,
+              assets/images/logo2@2x.png 2x
+            "
                     alt=""
                   />
                 </a>
               </div>
-              <div class="nav-bars-wrapper">
-                <div class="nav-bars-inner">
+              <div className="nav-bars-wrapper">
+                <div className="nav-bars-inner">
                   <div
-                    class="nav-bars"
+                    className="nav-bars"
                     data-toggle="collapse"
                     data-target=".navbar-collapse"
                   >
-                    <span></span>
+                    <span />
                   </div>
                 </div>
+                {/* /.nav-bars-inner */}
               </div>
+              {/* /.nav-bars-wrapper */}
             </div>
-
-            <div class="align-center flex-it">
-              <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            {/* /.nav-header */}
+            <div className="align-center flex-it">
+              <div className="navbar-collapse collapse">
+                <ul className="nav navbar-nav">
                   <li>
-                    <a href="#home" class="scroll">
+                    <a href="#home" className="scroll">
                       Home
-                    </a>{" "}
+                    </a>
                   </li>
                   <li>
-                    <a href="#advertorial" class="scroll">
+                    <a href="#advertorial" className="scroll">
                       Advertorial
-                    </a>{" "}
+                    </a>
                   </li>
                   <li>
-                    <a href="#fashion" class="scroll">
+                    <a href="#fashion" className="scroll">
                       Fashion
-                    </a>{" "}
+                    </a>
                   </li>
                   <li>
-                    <a href="#black-white" class="scroll">
-                      Black & White
-                    </a>{" "}
+                    <a href="#black-white" className="scroll">
+                      Black &amp; White
+                    </a>
                   </li>
                   <li>
-                    <a href="#about" class="scroll">
+                    <a href="#about" className="scroll">
                       About
-                    </a>{" "}
+                    </a>
                   </li>
                   <li>
-                    <a href="#contact" class="scroll">
+                    <a href="#contact" className="scroll">
                       Contact
-                    </a>{" "}
+                    </a>
                   </li>
                 </ul>
+                {/*/.navbar-nav */}
               </div>
+              {/*/.nav-collapse */}
             </div>
-
-            <div class="align-right text-right">
-              <ul class="social social-color social-s">
+            {/*/.align-center */}
+            <div className="align-right text-right">
+              <ul className="social social-color social-s">
                 <li>
-                  <a href="#">
-                    <i class="et-500px"></i>
+                  <a href="#/">
+                    <i className="et-500px" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="et-instagram"></i>
+                  <a href="#/">
+                    <i className="et-instagram" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="et-twitter"></i>
+                  <a href="#/">
+                    <i className="et-twitter" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="et-flickr"></i>
+                  <a href="#/">
+                    <i className="et-flickr" />
                   </a>
                 </li>
               </ul>
             </div>
+            {/*/.align-right */}
           </div>
+          {/*/.flex-it */}
         </nav>
-
+        {/*/.navbar */}
         <section id="home">
-          <div class="rev_slider_wrapper fullscreen-container">
+          <div className="rev_slider_wrapper fullscreen-container">
             <div
               id="slider7"
-              class="rev_slider fullscreenbanner rs-nav-light"
+              className="rev_slider fullscreenbanner rs-nav-light"
               data-version="5.4.1"
             >
               <ul>
                 <li data-transition="fade" data-nav-color="dark">
                   <img
-                    src={sliderbg41}
+                    src="/assets/images/art/sliderbg41.jpg"
                     alt=""
                     data-bgposition="center center"
                     data-kenburns="on"
-                    data-duration="10000"
+                    data-duration={10000}
                     data-ease="Power1.easeOut"
-                    data-scalestart="110"
-                    data-scaleend="100"
-                    data-rotatestart="0"
-                    data-rotateend="0"
+                    data-scalestart={110}
+                    data-scaleend={100}
+                    data-rotatestart={0}
+                    data-rotateend={0}
                     data-offsetstart="0 0"
                     data-offsetend="0 0"
-                    class="rev-slidebg"
+                    className="rev-slidebg"
                     data-no-retina
                   />
                   <div
-                    class="tp-caption w-regular color-white text-center"
+                    className="tp-caption w-regular color-white text-center"
                     data-x="left"
                     data-hoffset="['610','510','410','230']"
                     data-y="middle"
@@ -164,12 +142,12 @@ const Port1 = () => {
                     data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
                     data-responsive="on"
                     data-responsive_offset="on"
-                    style={{ Zindex: "9" }}
+                    style={{ zIndex: 9 }}
                   >
                     Jonathan Davis Phototography
                   </div>
                   <div
-                    class="tp-caption w-light color-white text-center"
+                    className="tp-caption w-light color-white text-center"
                     data-x="left"
                     data-hoffset="['610','510','410','230']"
                     data-y="middle"
@@ -181,13 +159,13 @@ const Port1 = () => {
                     data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
                     data-responsive="on"
                     data-responsive_offset="on"
-                    style={{ Zindex: "9" }}
+                    style={{ zIndex: 9 }}
                   >
-                    I specialize in fashion, advertorial, black & white
+                    I specialize in fashion, advertorial, black &amp; white
                     photography
                   </div>
                   <a
-                    class="tp-caption btn btn-border btn-white btn-rounded btn-l"
+                    className="tp-caption btn btn-border btn-white btn-rounded btn-l"
                     data-x="left"
                     data-hoffset="['610','510','410','230']"
                     data-y="middle"
@@ -196,231 +174,219 @@ const Port1 = () => {
                     data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
                     data-responsive="on"
                     data-responsive_offset="on"
-                    style={{ Zindex: "9" }}
-                    href="#"
+                    style={{ zIndex: 9 }}
+                    href="#/"
                   >
                     See My Portfolio
-                  </a>{" "}
+                  </a>
                 </li>
               </ul>
-              <div class="tp-bannertimer tp-bottom"></div>
+              <div className="tp-bannertimer tp-bottom" />
             </div>
+            {/* /.rev_slider */}
           </div>
+          {/* /.rev_slider_wrapper */}
         </section>
-
+        {/* /#home */}
         <section id="advertorial">
-          <div class="wrapper light-wrapper">
-            <div class="container inner pb-40">
-              <h2 class="section-title text-center">Advertorial Photograpy</h2>
-              <p class="lead text-center mb-0">
-                I take photographs with creativity, concept and passion
-              </p>
-            </div>
-
-            <div class="slick-wrapper">
-              <div
-                class="slick var-slick text-center"
-                data-slick='{"slidesToShow": 1, "dots": false, "infinite": true, "variableWidth": true}'
-              >
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr1} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr2} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr3} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr4} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr5} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr6} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr7} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr8} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={ctr9} alt="" />{" "}
-                </div>
-              </div>
-
-              <div class="slick-nav-container inner-arrows bg light-bg">
-                <div class="slick-nav"></div>
-              </div>
-            </div>
-
-            <div class="space90"></div>
-          </div>
-        </section>
-
-        <section id="fashion">
-          <div class="wrapper gray-wrapper">
-            <div class="container inner pb-40">
-              <h2 class="section-title text-center">Fashion Photograpy</h2>
-              <p class="lead text-center mb-0">
-                I take photographs with creativity, concept and passion
-              </p>
-            </div>
-
-            <div class="slick-wrapper">
-              <div
-                class="slick var-slick text-center"
-                data-slick='{"slidesToShow": 1, "dots": false, "infinite": true, "variableWidth": true}'
-              >
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr19} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr20} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr21} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr22} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr23} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr24} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr25} alt="" />{" "}
-                </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr26} alt="" />{" "}
-                </div>
-              </div>
-
-              <div class="slick-nav-container inner-arrows bg light-bg">
-                <div class="slick-nav"></div>
-              </div>
-            </div>
-
-            <div class="space90"></div>
-          </div>
-        </section>
-
-        <section id="black-white">
-          <div class="wrapper light-wrapper">
-            <div class="container inner pb-40">
-              <h2 class="section-title text-center">
-                Black & White Photograpy
+          <div className="wrapper light-wrapper">
+            <div className="container inner pb-40">
+              <h2 className="section-title text-center">
+                Advertorial Photograpy
               </h2>
-              <p class="lead text-center mb-0">
+              <p className="lead text-center mb-0">
                 I take photographs with creativity, concept and passion
               </p>
             </div>
-
-            <div class="slick-wrapper">
+            {/* /.container */}
+            <div className="slick-wrapper">
               <div
-                class="slick var-slick text-center"
+                className="slick var-slick text-center"
                 data-slick='{"slidesToShow": 1, "dots": false, "infinite": true, "variableWidth": true}'
               >
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr27} alt="" />{" "}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr1.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr28} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr2.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr29} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr3.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr30} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr4.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr31} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr5.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr32} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr6.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr33} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr7.jpg" alt="" />
                 </div>
-
-                <div class="item mr-5 ml-5">
-                  {" "}
-                  <img src={cr34} alt="" />{" "}
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr8.jpg" alt="" />
                 </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr9.jpg" alt="" />
+                </div>
+                {/*/.item */}
               </div>
-
-              <div class="slick-nav-container inner-arrows bg light-bg">
-                <div class="slick-nav"></div>
+              {/*/.slick */}
+              <div className="slick-nav-container inner-arrows bg light-bg">
+                <div className="slick-nav" />
               </div>
+              {/*/.slick-nav-container */}
             </div>
-
-            <div class="space90"></div>
+            {/*/.slick-wrapper */}
+            <div className="space90" />
           </div>
+          {/* /.light-wrapper */}
         </section>
-
+        {/* /#advertorial */}
+        <section id="fashion">
+          <div className="wrapper gray-wrapper">
+            <div className="container inner pb-40">
+              <h2 className="section-title text-center">Fashion Photograpy</h2>
+              <p className="lead text-center mb-0">
+                I take photographs with creativity, concept and passion
+              </p>
+            </div>
+            {/* /.container */}
+            <div className="slick-wrapper">
+              <div
+                className="slick var-slick text-center"
+                data-slick='{"slidesToShow": 1, "dots": false, "infinite": true, "variableWidth": true}'
+              >
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr19.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr20.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr21.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr22.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr23.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr24.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr25.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr26.jpg" alt="" />
+                </div>
+                {/*/.item */}
+              </div>
+              {/*/.slick */}
+              <div className="slick-nav-container inner-arrows bg light-bg">
+                <div className="slick-nav" />
+              </div>
+              {/*/.slick-nav-container */}
+            </div>
+            {/*/.slick-wrapper */}
+            <div className="space90" />
+          </div>
+          {/* /.gray-wrapper */}
+        </section>
+        {/* /#fashion */}
+        <section id="black-white">
+          <div className="wrapper light-wrapper">
+            <div className="container inner pb-40">
+              <h2 className="section-title text-center">
+                Black &amp; White Photograpy
+              </h2>
+              <p className="lead text-center mb-0">
+                I take photographs with creativity, concept and passion
+              </p>
+            </div>
+            {/* /.container */}
+            <div className="slick-wrapper">
+              <div
+                className="slick var-slick text-center"
+                data-slick='{"slidesToShow": 1, "dots": false, "infinite": true, "variableWidth": true}'
+              >
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr27.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr28.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr29.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr30.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr31.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr32.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr33.jpg" alt="" />
+                </div>
+                {/*/.item */}
+                <div className="item mr-5 ml-5">
+                  <img src="assets/images/art/cr34.jpg" alt="" />
+                </div>
+                {/*/.item */}
+              </div>
+              {/*/.slick */}
+              <div className="slick-nav-container inner-arrows bg light-bg">
+                <div className="slick-nav" />
+              </div>
+              {/*/.slick-nav-container */}
+            </div>
+            {/*/.slick-wrapper */}
+            <div className="space90" />
+          </div>
+          {/* /.light-wrapper */}
+        </section>
+        {/* /#black-white */}
         <section id="about">
-          <div class="wrapper gray-wrapper">
-            <div class="container inner">
-              <h2 class="section-title text-center">About Me</h2>
-              <div class="space20"></div>
-              <div class="row">
-                <div class="col-md-6">
+          <div className="wrapper gray-wrapper">
+            <div className="container inner">
+              <h2 className="section-title text-center">About Me</h2>
+              <div className="space20" />
+              <div className="row">
+                <div className="col-md-6">
                   <figure>
-                    <img src={about8} alt="" />
+                    <img src="assets/images/art/about8.jpg" alt="" />
                   </figure>
                 </div>
-
-                <div class="space30 hidden-xs hidden-md hidden-lg"></div>
-                <div class="col-md-6">
+                {/* /column */}
+                <div className="space30 hidden-xs hidden-md hidden-lg" />
+                <div className="col-md-6">
                   <h3>Who is Behind?</h3>
                   <p>
                     Praesent commodo cursus magna, vel scelerisque nisl
@@ -430,7 +396,7 @@ const Port1 = () => {
                     nulla sed consectetur. Vestibulum id ligula porta felis
                     euismod semper.
                   </p>
-                  <blockquote class="border">
+                  <blockquote className="border">
                     <p>
                       “Praesent commodo cursus magna, vel scelerisque nisl
                       consectetur et. Nullam id dolor id nibh ultricies vehicula
@@ -445,48 +411,49 @@ const Port1 = () => {
                     adipiscing elit. Donec ullamcorper nulla non.
                   </p>
                   <h3>Elsewhere</h3>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
-                      <a href="#">
-                        <i class="et-twitter"></i>
+                      <a href="#/">
+                        <i className="et-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="et-facebook"></i>
+                      <a href="#/">
+                        <i className="et-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="et-pinterest"></i>
+                      <a href="#/">
+                        <i className="et-pinterest" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="et-vimeo"></i>
+                      <a href="#/">
+                        <i className="et-vimeo" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="et-instagram"></i>
+                      <a href="#/">
+                        <i className="et-instagram" />
                       </a>
                     </li>
                   </ul>
                 </div>
+                {/* /column */}
               </div>
-
-              <div class="space70"></div>
-              <div class="row">
-                <div class="col-sm-4">
+              {/* /.row */}
+              <div className="space70" />
+              <div className="row">
+                <div className="col-sm-4">
                   <h3>Who am I?</h3>
-                  <p class="lead">
+                  <p className="lead">
                     I’m a freelance photographer specializing in landscape,
                     advertorial and conceptual photography, based in New York. I
                     love to turn ideas into beautiful things.
                   </p>
                 </div>
-
-                <div class="col-sm-4">
+                {/* /column */}
+                <div className="col-sm-4">
                   <h3>Why Choose Me?</h3>
                   <p>
                     Duis mollis, est non commodo luctus, nisi porttitor ligula,
@@ -499,63 +466,66 @@ const Port1 = () => {
                     <li>Vestibulum id ligula porta felis euismod.</li>
                   </ol>
                 </div>
-
-                <div class="col-sm-4">
+                {/* /column */}
+                <div className="col-sm-4">
                   <h3>My Skills</h3>
-                  <ul class="progress-list">
+                  <ul className="progress-list">
                     <li>
                       <p>Photoshop</p>
                       <div
-                        class="progressbar line border yellow"
-                        data-value="90"
-                      ></div>
+                        className="progressbar line border yellow"
+                        data-value={90}
+                      />
                     </li>
                     <li>
                       <p>Final Cut</p>
                       <div
-                        class="progressbar line border pink"
-                        data-value="80"
-                      ></div>
+                        className="progressbar line border pink"
+                        data-value={80}
+                      />
                     </li>
                     <li>
                       <p>Studio Photography</p>
                       <div
-                        class="progressbar line border purple"
-                        data-value="85"
-                      ></div>
+                        className="progressbar line border purple"
+                        data-value={85}
+                      />
                     </li>
                   </ul>
+                  {/* /.progress-list */}
                 </div>
+                {/* /column */}
               </div>
-
-              <div class="space10"></div>
-              <div class="text-center">
-                <a href="#" class="btn btn-rounded">
+              {/* /.row */}
+              <div className="space10" />
+              <div className="text-center">
+                <a href="#/" className="btn btn-rounded">
                   Hire Me
                 </a>
               </div>
             </div>
+            {/* /.container */}
           </div>
+          {/* /.gray-wrapper */}
         </section>
-
+        {/* /#about */}
         <section id="contact">
-          <div class="wrapper light-wrapper">
-            <div class="container inner">
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                  <h2 class="section-title text-center">Get in Touch</h2>
-                  <p class="text-center">
+          <div className="wrapper light-wrapper">
+            <div className="container inner">
+              <div className="row">
+                <div className="col-md-8 col-md-offset-2">
+                  <h2 className="section-title text-center">Get in Touch</h2>
+                  <p className="text-center">
                     Nullam quis risus eget urna mollis ornare vel eu leo. Fusce
                     dapibus, tellus ac cursus commodo, tortor mauris condimentum
                     nibh, ut fermentum massa justo sit amet risus. Integer
                     posuere erat.
                   </p>
-                  <div class="space30"></div>
-                  <div class="row text-center">
-                    <div class="col-sm-4">
-                      {" "}
-                      <span class="icon icon-color icon-m mb-5">
-                        <i class="si-camping_map"></i>
+                  <div className="space30" />
+                  <div className="row text-center">
+                    <div className="col-sm-4">
+                      <span className="icon icon-color icon-m mb-5">
+                        <i className="si-camping_map" />
                       </span>
                       <p>
                         Moon Street Light Avenue
@@ -563,101 +533,103 @@ const Port1 = () => {
                         14/05 Jupiter, JP 80630
                       </p>
                     </div>
-
-                    <div class="col-sm-4">
-                      {" "}
-                      <span class="icon icon-color icon-m mb-5">
-                        <i class="si-phone_phone-ringing"></i>
+                    {/*/column */}
+                    <div className="col-sm-4">
+                      <span className="icon icon-color icon-m mb-5">
+                        <i className="si-phone_phone-ringing" />
                       </span>
                       <p>
                         00 (123) 456 78 90
                         <br />
-                        00 (987) 654 32 10{" "}
+                        00 (987) 654 32 10
                       </p>
                     </div>
-
-                    <div class="col-sm-4">
-                      {" "}
-                      <span class="icon icon-color icon-m mb-5">
-                        <i class="si-mail_mail-2"></i>
+                    {/*/column */}
+                    <div className="col-sm-4">
+                      <span className="icon icon-color icon-m mb-5">
+                        <i className="si-mail_mail-2" />
                       </span>
                       <p>
                         <a
-                          class="nocolor"
+                          className="nocolor"
                           href="https://demos.elemisthemes.com/cdn-cgi/l/email-protection#785b"
                         >
                           <span
-                            class="__cf_email__"
+                            className="__cf_email__"
                             data-cfemail="3d505c535c5a584f7d58505c5451135e5250"
                           >
-                            [email&#160;protected]
+                            [email&nbsp;protected]
                           </span>
                         </a>
                         <br />
                         <a
-                          class="nocolor"
+                          className="nocolor"
                           href="https://demos.elemisthemes.com/cdn-cgi/l/email-protection#e2c1"
                         >
                           <span
-                            class="__cf_email__"
+                            className="__cf_email__"
                             data-cfemail="68091b011b1c09061c280d05090104460b0705"
                           >
-                            [email&#160;protected]
+                            [email&nbsp;protected]
                           </span>
                         </a>
                       </p>
                     </div>
+                    {/*/column */}
                   </div>
-
-                  <div class="space30"></div>
-                  <div class="form-container">
+                  {/*/.row */}
+                  <div className="space30" />
+                  <div className="form-container">
                     <form
                       action="https://demos.elemisthemes.com/creatink/contact/vanilla-form.php"
                       method="post"
-                      class="vanilla vanilla-form"
-                      // novalidate
+                      className="vanilla vanilla-form"
+                      noValidate
                     >
-                      <div class="row">
-                        <div class="col-sm-6 pr-10">
-                          <div class="form-group">
+                      <div className="row">
+                        <div className="col-sm-6 pr-10">
+                          <div className="form-group">
                             <input
                               type="text"
-                              class="form-control"
+                              className="form-control"
                               name="name"
                               placeholder="Your name"
                               required="required"
                             />
                           </div>
+                          {/*/.form-group */}
                         </div>
-
-                        <div class="col-sm-6 pl-10">
-                          <div class="form-group">
+                        {/*/column */}
+                        <div className="col-sm-6 pl-10">
+                          <div className="form-group">
                             <input
                               type="email"
-                              class="form-control"
+                              className="form-control"
                               name="email"
                               placeholder="Your e-mail"
                               required="required"
                             />
                           </div>
+                          {/*/.form-group */}
                         </div>
-
-                        <div class="col-sm-6 pr-10">
-                          <div class="form-group">
+                        {/*/column */}
+                        <div className="col-sm-6 pr-10">
+                          <div className="form-group">
                             <input
                               type="tel"
-                              class="form-control"
+                              className="form-control"
                               name="tel"
                               placeholder="Phone"
                             />
                           </div>
+                          {/*/.form-group */}
                         </div>
-
-                        <div class="col-sm-6 pl-10">
-                          <div class="form-group">
-                            <label class="custom-select">
+                        {/*/column */}
+                        <div className="col-sm-6 pl-10">
+                          <div className="form-group">
+                            <label className="custom-select">
                               <select name="department" required>
-                                <option value="">Select Department</option>
+                                <option value>Select Department</option>
                                 <option value="Sales">Sales</option>
                                 <option value="Marketing">Marketing</option>
                                 <option value="Support">
@@ -665,99 +637,79 @@ const Port1 = () => {
                                 </option>
                                 <option value="Other">Other</option>
                               </select>
-                              <span></span>{" "}
+                              <span>{/* fake select handler */}</span>
                             </label>
                           </div>
+                          {/*/.form-group */}
                         </div>
-
-                        <div class="col-sm-12 text-center">
+                        {/*/column */}
+                        <div className="col-sm-12 text-center">
                           <textarea
                             name="message"
-                            class="form-control"
-                            rows="3"
+                            className="form-control"
+                            rows={3}
                             placeholder="Type your message here..."
                             required
-                          ></textarea>
-                          <div class="radio-set radio">
+                            defaultValue={""}
+                          />
+                          <div className="radio-set radio">
                             <label>Subject:</label>
                             <label>
                               <input
                                 type="radio"
                                 name="subject"
-                                value="General"
+                                defaultValue="General"
                               />
-                              <span></span> General
-                            </label>
-                            <label>
-                              <input type="radio" name="subject" value="Hi" />
-                              <span></span> Say Hi
+                              <span>{/* fake radio */}</span> General
                             </label>
                             <label>
                               <input
                                 type="radio"
                                 name="subject"
-                                value="Other"
+                                defaultValue="Hi"
                               />
-                              <span></span> Other
+                              <span>{/* fake radio */}</span> Say Hi
+                            </label>
+                            <label>
+                              <input
+                                type="radio"
+                                name="subject"
+                                defaultValue="Other"
+                              />
+                              <span>{/* fake radio */}</span> Other
                             </label>
                           </div>
-
+                          {/*/.radio-set */}
                           <button
                             type="submit"
-                            class="btn btn-rounded"
+                            className="btn btn-rounded"
                             data-error="Fix errors"
                             data-processing="Sending..."
                             data-success="Thank you!"
                           >
                             Submit
                           </button>
-                          <footer class="notification-box"></footer>
+                          <footer className="notification-box" />
                         </div>
+                        {/*/column */}
                       </div>
+                      {/*/.row */}
                     </form>
+                    {/*/.vanilla-form */}
                   </div>
+                  {/*/.form-container */}
                 </div>
+                {/* /column */}
               </div>
+              {/* /.row */}
             </div>
+            {/* /.container */}
           </div>
+          {/* /.light-wrapper */}
         </section>
+        {/* /#contact */}
       </div>
-
-      <footer class="dark-wrapper inverse-text">
-        <div class="sub-footer">
-          <div class="container inner pt-50 pb-50 text-center">
-            <p>© 2017 crea;tink. All rights reserved. Theme by elemis.</p>
-            <div class="space20"></div>
-            <ul class="social social-bg social-s">
-              <li>
-                <a href="#">
-                  <i class="et-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="et-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="et-pinterest"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="et-vimeo"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="et-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
