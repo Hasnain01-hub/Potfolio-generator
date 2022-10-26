@@ -1,6 +1,32 @@
+import { useSelector } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
 import React from "react";
-
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../Firebase";
 const Header = () => {
+  const { user } = useSelector((state) => ({ ...state }));
+  const styles = {
+    Login: {
+      background: "white",
+      padding: "0 10px",
+      width:"auto",
+      height:"37px",
+      marginTop: "18px",
+      
+      color: "black",
+      fontSize: "15px",
+      borderRadius: "15px",
+      border: "none",
+      boxShadow: "0px 0px 3px 0px #09ab1b",
+      cursor: "pointer",
+    },
+  };
+  let history = useHistory();
+  const logout=() =>{
+    auth.signOut();
+    toast.success("Logout Successfully");
+    history.push("/");
+  }
   return (
     <div className="navbar-area pakap-new-navbar-area">
       <div className="pakap-responsive-nav">
@@ -23,10 +49,10 @@ const Header = () => {
             <div className="collapse navbar-collapse mean-menu">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a href="#/" className="dropdown-toggle nav-link active">
+                  <Link to="/" className="nav-link active">
                     Home
-                  </a>
-                  <ul className="dropdown-menu">
+                  </Link>
+                  {/* <ul className="dropdown-menu">
                     <li className="nav-item">
                       <a href="index.html" className="nav-link">
                         Home Demo - 1
@@ -72,13 +98,13 @@ const Header = () => {
                         Home Demo - 9
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="nav-item">
-                  <a href="#/" className="dropdown-toggle nav-link">
+                  <Link to="/about" className="nav-link">
                     About Us
-                  </a>
-                  <ul className="dropdown-menu">
+                  </Link>
+                  {/* <ul className="dropdown-menu">
                     <li className="nav-item">
                       <a href="about-simple.html" className="nav-link">
                         About Simple
@@ -106,7 +132,7 @@ const Header = () => {
                         </li>
                       </ul>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="nav-item megamenu">
                   <a href="#/" className="dropdown-toggle nav-link">
@@ -120,7 +146,7 @@ const Header = () => {
                             <h6 className="submenu-title">Pages I</h6>
                             <ul className="megamenu-submenu">
                               <li>
-                                <a href="team-1.html">Team 1</a>
+                                <Link to="team-1.html">Team 1</Link>
                               </li>
                               <li>
                                 <a href="team-2.html">Team 2</a>
@@ -204,10 +230,10 @@ const Header = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a href="#/" className="dropdown-toggle nav-link">
-                    Shop
-                  </a>
-                  <ul className="dropdown-menu">
+                  <Link to="/" className="nav-link">
+                    Contact
+                  </Link>
+                  {/* <ul className="dropdown-menu">
                     <li className="nav-item">
                       <a href="products.html" className="nav-link">
                         Products List
@@ -228,13 +254,13 @@ const Header = () => {
                         Products Details
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="nav-item">
-                  <a href="#/" className="dropdown-toggle nav-link">
-                    Blog
-                  </a>
-                  <ul className="dropdown-menu">
+                  <Link to="/" className="nav-link">
+                    Pricing
+                  </Link>
+                  {/* <ul className="dropdown-menu">
                     <li className="nav-item">
                       <a href="blog-grid.html" className="nav-link">
                         Blog Grid
@@ -255,18 +281,31 @@ const Header = () => {
                         Blog Details
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
-                <li className="nav-item">
-                  <a href="contact.html" className="nav-link">
-                    Contact
-                  </a>
-                </li>
+                {!user ? (
+                  <li className="nav-item">
+                    <Link to="/login" className="nav-link">
+                      Login
+                    </Link>
+                  </li>
+                ) : (
+                  <button
+                    onClick={logout}
+                    style={styles.Login}
+                    // icon={<GoogleOutlined />}
+                    size="large"
+                  >
+                    <i class="ri-logout-circle-r-line"></i>
+                    &nbsp;Logout
+                  </button>
+                )}
               </ul>
             </div>
           </nav>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

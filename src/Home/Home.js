@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <div>
         {/* Start Navbar Area */}
-        <Header />
+
         {/* End Navbar Area */}
         {/* Start New App Main Banner Wrap Area */}
         <div className="new-app-main-banner-wrap-area">
@@ -234,7 +234,6 @@ const Home = () => {
                   <img
                     src="assets/ast/img/more-home/about/abouts.png"
                     alt="disp"
-                    
                   />
                 </div>
               </div>
@@ -502,7 +501,8 @@ const Home = () => {
                   <span className="sub-title">INTRO VIDEO</span>
                   <h2>Get familar with our dashboard</h2>
                   <p>
-                    Stuck any where?? watch the video and get familar with our app.
+                    Stuck any where?? watch the video and get familar with our
+                    app.
                   </p>
                   <a href="contact.html" className="default-btn">
                     Get Started
@@ -986,11 +986,11 @@ const Home = () => {
         </div>
         {/* End Partner Area */}
         {/* Start Footer Wrap Area */}
-        <Footer />
+
         {/* End Footer Wrap Area */}
-        <div className="go-top">
+        {/* <div className="go-top">
           <i className="ri-arrow-up-s-line" />
-        </div>
+        </div> */}
       </div>
     </>
   );
