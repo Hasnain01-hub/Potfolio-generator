@@ -18,10 +18,9 @@ const Home = () => {
                   <span className="sub-title">
                     #Get Your 14 Days Free Trial
                   </span>
-                  <h1>Manage All Of Your Stuff Using A Pakap</h1>
+                  <h1>Create your portfoliio within a click</h1>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
-                    tincidunt eifend odio viverra diam aliquet donec again.
+                    choose from 5+ pre-made templates and create your portfolio
                   </p>
                   <ul className="user-info">
                     <li>
@@ -54,7 +53,7 @@ const Home = () => {
                     </li>
                     <li className="title">4K+ used this App</li>
                   </ul>
-                  <div className="app-btn-box">
+                  {/* <div className="app-btn-box">
                     <a href="#/" className="applestore-btn" target="_blank">
                       <img src="assets/ast/img/apple-store.png" alt="disp" />
                       Download on the
@@ -65,7 +64,7 @@ const Home = () => {
                       Get It On
                       <span>Google Play</span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
@@ -75,7 +74,7 @@ const Home = () => {
                   data-aos-duration={2000}
                 >
                   <img
-                    src="assets/ast/img/more-home/banner/banner-2.png"
+                    src="assets/ast/img/more-home/banner/front.png"
                     alt="disp"
                   />
                   <div className="wrap-image-shape-1">
@@ -114,16 +113,14 @@ const Home = () => {
                   <span className="sub-title">KEY FEATURES</span>
                   <h2>Most Probably Included Best Features Ever</h2>
                   <p>
-                    Cloud based storage for your data backup just log in with
-                    your mail account from play store and using whatever you
-                    want for your business purpose orem ipsum dummy text. Never
-                    missyour chance its just began.
+                    Without writing any code bulit your portfolio within few
+                    click.
                   </p>
-                  <p>
+                  {/* <p>
                     Cloud based storage for your data backup just log in with
                     your mail account from play store and using whatever you
                     want chance its just began.
-                  </p>
+                  </p> */}
                   <div className="btn-box">
                     <a href="pricing.html" className="default-btn">
                       Start Free Trial
@@ -140,11 +137,11 @@ const Home = () => {
                     <div className="features-inner-card">
                       <div className="icon">
                         <i className="ri-eye-line" />
-                        <h3>High Resolution</h3>
+                        <h3>Responsive Design</h3>
                       </div>
                       <p>
-                        Just log in with your mail account from play store and
-                        using whatever you want for your able business purpose.
+                        The design of the templete will be adjusted according to
+                        the any screen size.
                       </p>
                     </div>
                   </div>
@@ -152,12 +149,9 @@ const Home = () => {
                     <div className="features-inner-card with-box-shadow">
                       <div className="icon">
                         <i className="ri-stack-line" />
-                        <h3>Retina Ready Screen</h3>
+                        <h3>Easily deploy</h3>
                       </div>
-                      <p>
-                        Just log in with your mail account from play store and
-                        using whatever you want for your able business purpose.
-                      </p>
+                      <p>Automatically deploy your portfolio to the cloud.</p>
                     </div>
                   </div>
                   <div className="col-lg-6 col-sm-6">
@@ -167,8 +161,9 @@ const Home = () => {
                         <h3>Cloud Storage</h3>
                       </div>
                       <p>
-                        Just log in with your mail account from play store and
-                        using whatever you want for your able business purpose.
+                        Cloud based storage for your data backup just log in
+                        with your gmail account and choose whatever template you
+                        want for your business purpose.
                       </p>
                     </div>
                   </div>
@@ -179,8 +174,8 @@ const Home = () => {
                         <h3>Easy Editable Data</h3>
                       </div>
                       <p>
-                        Just log in with your mail account from play store and
-                        using whatever you want for your able business purpose.
+                        Easily manage your content with our easy to use
+                        dashboard.
                       </p>
                     </div>
                   </div>
@@ -205,9 +200,9 @@ const Home = () => {
               <div className="col-xl-3 col-lg-3 col-sm-3 col-md-3 col-6">
                 <div className="features-box-card">
                   <div className="icon bg2">
-                    <i className="ri-award-line" />
+                    <i className="ri-code-line" />
                   </div>
-                  <h3>Award Winning App</h3>
+                  <h3>Codeless</h3>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-3 col-sm-3 col-md-3 col-6">
@@ -237,15 +232,16 @@ const Home = () => {
               <div className="col-lg-6 col-md-12">
                 <div className="app-about-image">
                   <img
-                    src="assets/ast/img/more-home/about/about-2.png"
+                    src="assets/ast/img/more-home/about/abouts.png"
                     alt="disp"
+                    
                   />
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
                 <div className="app-about-content">
                   <span className="sub-title">ABOUT US</span>
-                  <h2>Most Probably You Are Getting Best App Ever</h2>
+                  <h2>Most Probably You Are Getting Best Service Ever</h2>
                   <p>
                     Cloud based storage for your data backup just log in with
                     your mail account from play store and using whatever you
@@ -302,10 +298,10 @@ const Home = () => {
                   <div className="icon">
                     <i className="ri-eye-line" />
                   </div>
-                  <h3>High Resolution</h3>
+                  <h3>Codeless</h3>
                   <p>
-                    Just log in with your mail account from play store and using
-                    whatever you want for your able business purpose.
+                    Without writing any code bulit your portfolio within few
+                    click.
                   </p>
                 </div>
               </div>
@@ -314,11 +310,8 @@ const Home = () => {
                   <div className="icon bg2">
                     <i className="ri-stack-line" />
                   </div>
-                  <h3>Retina Ready Screen</h3>
-                  <p>
-                    Just log in with your mail account from play store and using
-                    whatever you want for your able business purpose.
-                  </p>
+                  <h3>Easily deploy</h3>
+                  <p>Automatically deploy your portfolio to the cloud.</p>
                 </div>
               </div>
               <div className="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -328,8 +321,7 @@ const Home = () => {
                   </div>
                   <h3>Easy Editable Data</h3>
                   <p>
-                    Just log in with your mail account from play store and using
-                    whatever you want for your able business purpose.
+                    Easily manage your content with our easy to use dashboard.
                   </p>
                 </div>
               </div>
@@ -340,8 +332,8 @@ const Home = () => {
                   </div>
                   <h3>Fully Secured</h3>
                   <p>
-                    Just log in with your mail account from play store and using
-                    whatever you want for your able business purpose.
+                    It encrypts your data and keeps it safe from unauthorized
+                    access.
                   </p>
                 </div>
               </div>
@@ -352,8 +344,9 @@ const Home = () => {
                   </div>
                   <h3>Cloud Storage</h3>
                   <p>
-                    Just log in with your mail account from play store and using
-                    whatever you want for your able business purpose.
+                    Cloud based storage for your data backup just log in with
+                    your gmail account and choose whatever template you want for
+                    your business purpose.
                   </p>
                 </div>
               </div>
@@ -364,8 +357,8 @@ const Home = () => {
                   </div>
                   <h3>Responsive Ready</h3>
                   <p>
-                    Just log in with your mail account from play store and using
-                    whatever you want for your able business purpose.
+                    The design of the templete will be adjusted according to the
+                    any screen size.
                   </p>
                 </div>
               </div>
@@ -507,15 +500,9 @@ const Home = () => {
               <div className="col-lg-6 col-md-12">
                 <div className="app-intro-video-content">
                   <span className="sub-title">INTRO VIDEO</span>
-                  <h2>Watch Our Most Watched Pakap App Video</h2>
+                  <h2>Get familar with our dashboard</h2>
                   <p>
-                    Cloud based storage for your data backup just log in with
-                    your mail account from play store and using whatever you
-                    want for your business purpose orem ipsum dummy text. Never
-                    missyour chance its just began. Cloud based storage for your
-                    data backup just log in with your mail account from play
-                    store and using whatever you want for your business purpose
-                    orem ipsum dummy text.Never missyour chance its just began.
+                    Stuck any where?? watch the video and get familar with our app.
                   </p>
                   <a href="contact.html" className="default-btn">
                     Get Started
@@ -591,7 +578,7 @@ const Home = () => {
         </div>
         {/* End Gradient Funfacts Area */}
         {/* Start New App Download Area */}
-        <div className="new-app-download-wrap-area ptb-100">
+        {/* <div className="new-app-download-wrap-area ptb-100">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
@@ -649,7 +636,7 @@ const Home = () => {
               alt="disp"
             />
           </div>
-        </div>
+        </div> */}
         {/* End New App Download Area */}
         {/* Start Feedback Wrap Area */}
         <div className="feedback-wrap-area ptb-100">

@@ -946,9 +946,10 @@ New Demo CSS
 
 /* pakap-new-navbar-area-css */
 .pakap-new-navbar-area.is-sticky {
-  background-color: var(--whiteColor) !important;
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  background: rgba( 255, 255, 255, 0.25 ) !important;
+/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 5px );
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
           animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
@@ -5817,7 +5818,7 @@ New Demo CSS
   }
   .new-app-main-banner-wrap-image .wrap-image-shape-2 {
     right: 35px;
-    bottom: 110px;
+    bottom: 0px;
   }
   .features-inner-card {
     padding: 20px;
@@ -5970,7 +5971,7 @@ New Demo CSS
   }
   .new-app-main-banner-wrap-image .wrap-image-shape-2 {
     right: 35px;
-    bottom: 110px;
+    bottom: 0px;
   }
   .features-inner-card {
     padding: 20px;
@@ -6026,7 +6027,7 @@ New Demo CSS
   }
   .new-app-main-banner-wrap-image .wrap-image-shape-2 {
     right: 190px;
-    bottom: 210px;
+    bottom: 20px;
   }
   .new-app-main-banner-wrap-image .banner-circle {
     max-width: 100%;
