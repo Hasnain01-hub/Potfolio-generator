@@ -33,9 +33,9 @@ const Header = () => {
         <div className="container">
           <div className="pakap-responsive-menu">
             <div className="logo">
-              <a href="index.html">
+              <Link to="/">
                 <img src="assets/ast/img/black-logo.png" alt="logo" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -43,9 +43,9 @@ const Header = () => {
       <div className="pakap-nav">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="index.html">
+            <Link className="navbar-brand" to="/">
               <img src="assets/ast/img/black-logo.png" alt="logo" />
-            </a>
+            </Link>
             <div className="collapse navbar-collapse mean-menu">
               <ul className="navbar-nav">
                 <li className="nav-item">

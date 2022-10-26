@@ -86,7 +86,7 @@ function Signup() {
       marginLeft: "44px",
       fontWeight: "bold",
       color: "white",
-      borderRadius: "10px",
+      borderRadius: "15px",
       marginBottom: "10px",
       height: "auto",
       border: "none",
