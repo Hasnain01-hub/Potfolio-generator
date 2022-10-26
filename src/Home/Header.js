@@ -135,7 +135,7 @@ const Header = () => {
                   </ul> */}
                 </li>
                 <li className="nav-item megamenu">
-                  <a href="#/" className="dropdown-toggle nav-link">
+                  <a href="/" className="dropdown-toggle nav-link">
                     Pages
                   </a>
                   <ul className="dropdown-menu">
