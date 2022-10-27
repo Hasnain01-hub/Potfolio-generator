@@ -7,6 +7,7 @@ import Header from "./Home/Header";
 import Home from "./Home/Home";
 import Login from "./Home/Login";
 import Signup from "./Home/Signup";
+import Register from "./Home/userDashboard/Register";
 import Port1 from "./Port1/Port1";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/register" component={Register} />
         <Route exact path="/portfolio/1" component={Port1} />
       </Switch>
       <Footer />

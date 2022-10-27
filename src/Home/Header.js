@@ -9,10 +9,10 @@ const Header = () => {
     Login: {
       background: "white",
       padding: "0 10px",
-      width:"auto",
-      height:"37px",
+      width: "auto",
+      height: "37px",
       marginTop: "18px",
-      
+
       color: "black",
       fontSize: "15px",
       borderRadius: "15px",
@@ -22,11 +22,11 @@ const Header = () => {
     },
   };
   let history = useHistory();
-  const logout=() =>{
+  const logout = () => {
     auth.signOut();
     toast.success("Logout Successfully");
     history.push("/");
-  }
+  };
   return (
     <div className="navbar-area pakap-new-navbar-area">
       <div className="pakap-responsive-nav">
@@ -256,6 +256,14 @@ const Header = () => {
                     </li>
                   </ul> */}
                 </li>
+
+                {user ? (
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/register">Register</Link>
+                  </li>
+                ) : (
+                  <></>
+                )}
                 <li className="nav-item">
                   <Link to="/" className="nav-link">
                     Pricing
