@@ -2,13 +2,11 @@ import { React, Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { auth, db } from "./Firebase";
-import Footer from "./Home/Footer";
-import Header from "./Home/Header";
 import Home from "./Home/Home";
 import Login from "./Home/Login";
 import Signup from "./Home/Signup";
 import Register from "./Home/userDashboard/Register";
-import Port1 from "./Port1/Port1";
+import Port1 from "./Portfolios/Port1";
 
 function App() {
   const dispatch = useDispatch();
@@ -48,15 +46,13 @@ function App() {
   }, [dispatch]);
   return (
     <>
-      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/portfolio/1" component={Port1} />
+        <Route exact path="/portfolio/:id" component={Port1} />
       </Switch>
-      <Footer />
       <div className="go-top">
         <i className="ri-arrow-up-s-line" />
       </div>

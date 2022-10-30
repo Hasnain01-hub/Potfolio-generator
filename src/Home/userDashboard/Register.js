@@ -1,13 +1,13 @@
-import Lottie from "lottie-react";
 import "./register.css";
-import formanimation from "./form.json";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
 
 import Uploadfile from "./Upload";
 import { v4 as uuidv4 } from "uuid";
 import { db } from "../../Firebase";
+import Header from "../Header";
+import Footer from "../Footer";
 const Register = () => {
   const initialState = {
     name: "",
@@ -16,7 +16,7 @@ const Register = () => {
     location: "",
     images: [],
   };
-  const [loading, setLoading] = useState(false);
+  const [setLoading] = useState(false);
   var id = uuidv4();
   const { user } = useSelector((state) => ({ ...state }));
   const [values, setValues] = useState(initialState);
@@ -60,57 +60,54 @@ const Register = () => {
 
   return (
     <>
-      <div class="containerevent">
-        <div class="cardevent">
-          <div class="card-image">
-            <Lottie
-              className="eventgif"
-              animationData={formanimation}
-              loop={true}
-            />
-          </div>
-          <form class="card-form" onSubmit={handleSubmit}>
-            <div class="input">
-              <input
-                type="text"
-                name="name"
-                onChange={handleChange}
-                class="input-field"
-                required
-              />
-              <label class="input-label">Name</label>
-            </div>
-            <div class="input">
-              <input
-                type="text"
-                name="insta"
-                onChange={handleChange}
-                class="input-field"
-                required
-              />
-              <label class="input-label">Insta Handle</label>
-            </div>
-            <div class="input">
-              <input
-                type="text"
-                name="youtube"
-                onChange={handleChange}
-                class="input-field"
-                required
-              />
-              <label class="input-label">Youtube Handle</label>
-            </div>
-            <div class="input">
-              <input
-                type="text"
-                name="location"
-                onChange={handleChange}
-                class="input-field"
-                required
-              />
-              <label class="input-label">Location</label>
-            </div>
-            {/* <div class="input">
+      <Header />
+      <div className="new-app-main-banner-wrap-area">
+        <div className="d-table">
+          <div className="d-table-cell">
+            <div className="container">
+              <div className="signin-form">
+                <h2 style={{ fontWeight: "bold" }}>Sign In</h2>
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <input
+                      type="name"
+                      className="form-control"
+                      placeholder="Name"
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="url"
+                      name="insta"
+                      onChange={handleChange}
+                      class="form-control"
+                      placeholder="Instagram Link"
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="url"
+                      name="youtube"
+                      onChange={handleChange}
+                      class="form-control"
+                      placeholder="Youtube Channel Link"
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="name"
+                      name="location"
+                      onChange={handleChange}
+                      class="form-control"
+                      required
+                      placeholder="Enter Your Location"
+                    />
+                  </div>
+                  {/* <div class="input">
       <input
         type="file"
         onChange={handleChange}
@@ -121,19 +118,25 @@ const Register = () => {
 
       <label class="input-label">Image</label>
       </div> */}
-            <Uploadfile
-              values={values}
-              setValues={setValues}
-              setLoading={setLoading}
-            />
+                  <Uploadfile
+                    values={values}
+                    setValues={setValues}
+                    setLoading={setLoading}
+                  />
 
-            <div class="action">
-              <button class="action-button">Submit</button>
+                  <div class="action">
+                    <button class="action-button">Submit</button>
+                  </div>
+                </form>
+              </div>
+              <Toaster />
             </div>
-          </form>
+          </div>
         </div>
-        <Toaster />
       </div>
+      <br />
+      <br />
+      <Footer />
     </>
   );
 };

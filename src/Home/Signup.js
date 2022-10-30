@@ -75,7 +75,7 @@ function Signup() {
       history.push("/");
     } catch (err) {
       console.error(err);
-        toast.error("Registration Failed");
+      toast.error("Registration Failed");
     }
   };
   const style = {

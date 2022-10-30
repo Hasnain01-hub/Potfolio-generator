@@ -259,7 +259,9 @@ const Header = () => {
 
                 {user ? (
                   <li className="nav-item">
-                    <Link className="nav-link" to="/register">Register</Link>
+                    <Link className="nav-link" to="/register">
+                      Register
+                    </Link>
                   </li>
                 ) : (
                   <></>
@@ -298,15 +300,11 @@ const Header = () => {
                     </Link>
                   </li>
                 ) : (
-                  <button
-                    onClick={logout}
-                    style={styles.Login}
-                    // icon={<GoogleOutlined />}
-                    size="large"
-                  >
-                    <i class="ri-logout-circle-r-line"></i>
-                    &nbsp;Logout
-                  </button>
+                  <li className="nav-item">
+                    <Link onClick={logout} className="nav-link">
+                      Logout
+                    </Link>
+                  </li>
                 )}
               </ul>
             </div>

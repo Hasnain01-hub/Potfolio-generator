@@ -85,26 +85,25 @@ const Uploadfile = ({ values, setValues, setLoading }) => {
         {values.images &&
           values.images.map((image) => (
             <>
-            <i
-              style={{
-                position: 'relative',
-                left: '90%',
-                cursor: "pointer"
-              }}
-              
-              onClick={() => handleImageRemove(image.public_id)}
-              class="ri-close-line"
-            >
-              
-            </i>
-            <img
-            src={image.url}
-            width={100}
-            // shape="square"
-            className="ml-3"
-            alt="images"
-          />
-          </>
+              <div className="col-md-3">
+                <i
+                  style={{
+                    position: "relative",
+                    left: "90%",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleImageRemove(image.public_id)}
+                  class="ri-close-line"
+                ></i>
+                <img
+                  src={image.url}
+                  width={100}
+                  // shape="square"
+                  className="ml-3"
+                  alt="images"
+                />
+              </div>
+            </>
             // <Badge
             //   count="X"
             //   key={image.public_id}
@@ -127,8 +126,8 @@ const Uploadfile = ({ values, setValues, setLoading }) => {
             padding: "8px",
             borderRadius: "10px",
             transition: ".4s ease all",
-            width:"200px",
-            textAlign:"center",
+            width: "200px",
+            textAlign: "center",
           }}
           className=" btn-primary btn-raised"
         >

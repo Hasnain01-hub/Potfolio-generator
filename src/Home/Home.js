@@ -5,6 +5,7 @@ import Header from "./Header";
 const Home = () => {
   return (
     <>
+      <Header />
       <div>
         {/* Start Navbar Area */}
 
@@ -18,7 +19,9 @@ const Home = () => {
                   <span className="sub-title">
                     #Get Your 14 Days Free Trial
                   </span>
-                  <h1>Create your portfoliio within a click</h1>
+                  <h1 style={{ fontWeight: "bold" }}>
+                    Create your portfoliio within a click
+                  </h1>
                   <p>
                     choose from 5+ pre-made templates and create your portfolio
                   </p>
@@ -111,7 +114,9 @@ const Home = () => {
               <div className="col-lg-6 col-md-12">
                 <div className="features-inner-content">
                   <span className="sub-title">KEY FEATURES</span>
-                  <h2>Most Probably Included Best Features Ever</h2>
+                  <h2 style={{ fontWeight: "bold" }}>
+                    Most Probably Included Best Features Ever
+                  </h2>
                   <p>
                     Without writing any code bulit your portfolio within few
                     click.
@@ -240,7 +245,9 @@ const Home = () => {
               <div className="col-lg-6 col-md-12">
                 <div className="app-about-content">
                   <span className="sub-title">ABOUT US</span>
-                  <h2>Most Probably You Are Getting Best Service Ever</h2>
+                  <h2 style={{ fontWeight: "bold" }}>
+                    Most Probably You Are Getting Best Service Ever
+                  </h2>
                   <p>
                     Cloud based storage for your data backup just log in with
                     your mail account from play store and using whatever you
@@ -289,7 +296,9 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <span className="sub-title">KEY FEATURES</span>
-              <h2>Most Probably Included Best Features Ever</h2>
+              <h2 style={{ fontWeight: "bold" }}>
+                Most Probably Included Best Features Ever
+              </h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -375,7 +384,9 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <span className="sub-title">APP SCREENS</span>
-              <h2>Beautifully Crafted All App Screenshots</h2>
+              <h2 style={{ fontWeight: "bold" }}>
+                Beautifully Crafted All App Screenshots
+              </h2>
             </div>
             <div className="app-screenshots-slides owl-carousel owl-theme">
               <div className="single-screenshot-card">
@@ -499,7 +510,9 @@ const Home = () => {
               <div className="col-lg-6 col-md-12">
                 <div className="app-intro-video-content">
                   <span className="sub-title">INTRO VIDEO</span>
-                  <h2>Get familar with our dashboard</h2>
+                  <h2 style={{ fontWeight: "bold" }}>
+                    Get familar with our dashboard
+                  </h2>
                   <p>
                     Stuck any where?? watch the video and get familar with our
                     app.
@@ -643,7 +656,9 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <span className="sub-title">CLIENT REVIEWS</span>
-              <h2>What Our Customer Say About Us</h2>
+              <h2 style={{ fontWeight: "bold" }}>
+                What Our Customer Say About Us
+              </h2>
             </div>
             <div className="feedback-swiper-wrap-slides swiper-container">
               <div className="swiper-wrapper">
@@ -743,7 +758,9 @@ const Home = () => {
               <div className="col-lg-4 col-md-12">
                 <div className="app-pricing-section-title">
                   <span className="sub-title">PRICING TABLE</span>
-                  <h2>No Hidden Charge Applied, Choose Your Plan</h2>
+                  <h2 style={{ fontWeight: "bold" }}>
+                    No Hidden Charge Applied, Choose Your Plan
+                  </h2>
                   <a href="pricing.html">See All Pricing Plan</a>
                 </div>
               </div>
@@ -832,7 +849,9 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <span className="sub-title">BLOG POST</span>
-              <h2>Latest Article From Our Blog</h2>
+              <h2 style={{ fontWeight: "bold" }}>
+                Latest Article From Our Blog
+              </h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-lg-4 col-md-6">
@@ -992,6 +1011,7 @@ const Home = () => {
           <i className="ri-arrow-up-s-line" />
         </div> */}
       </div>
+      <Footer />
     </>
   );
 };
