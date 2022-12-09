@@ -1,8 +1,7 @@
 import "./register.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
-
 import Uploadfile from "./Upload";
 import { v4 as uuidv4 } from "uuid";
 import { db } from "../../Firebase";
@@ -16,22 +15,23 @@ const Register = () => {
     location: "",
     images: [],
   };
-  const [setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   var id = uuidv4();
   const { user } = useSelector((state) => ({ ...state }));
   const [values, setValues] = useState(initialState);
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+  let dispatch = useDispatch();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (values.event !== "" && values.date !== "" && values.desc !== "") {
-      if (values.images.length < 6) {
+      if (values.images.length < 2) {
         return toast.error("Please add 6 images");
       }
       await db
         .collection("user-profile")
-        .doc(id)
+        .doc(user.email)
         .set({
           id: id,
           name: values.name,
@@ -45,7 +45,19 @@ const Register = () => {
           console.log(res);
           // alert(`"${values.event}" is added`);
           toast.success(`Added ${values.name} to the database`);
-          window.location.reload();
+          dispatch({
+            type: "REGISTER_INFO",
+            payload: {
+              name: values.name,
+              insta: values.insta,
+              email: user.email,
+              youtube: values.youtube,
+              location: values.location,
+              images: values.images,
+            },
+          });
+          setValues(initialState);
+          // window.location.reload();
         })
         .catch((err) => {
           console.log(err);
@@ -66,11 +78,13 @@ const Register = () => {
           <div className="d-table-cell">
             <div className="container">
               <div className="signin-form">
-                <h2 style={{ fontWeight: "bold" }}>Sign In</h2>
-                <form onSubmit={handleSubmit}>
+                <h2 style={{ fontWeight: "bold" }}>Register</h2>
+                <form>
                   <div className="form-group">
                     <input
                       type="name"
+                      name="name"
+                      value={values.name}
                       className="form-control"
                       placeholder="Name"
                       onChange={handleChange}
@@ -81,6 +95,7 @@ const Register = () => {
                     <input
                       type="url"
                       name="insta"
+                      value={values.insta}
                       onChange={handleChange}
                       class="form-control"
                       placeholder="Instagram Link"
@@ -90,6 +105,7 @@ const Register = () => {
                   <div className="form-group">
                     <input
                       type="url"
+                      value={values.youtube}
                       name="youtube"
                       onChange={handleChange}
                       class="form-control"
@@ -102,6 +118,7 @@ const Register = () => {
                       type="name"
                       name="location"
                       onChange={handleChange}
+                      value={values.location}
                       class="form-control"
                       required
                       placeholder="Enter Your Location"
@@ -120,12 +137,15 @@ const Register = () => {
       </div> */}
                   <Uploadfile
                     values={values}
+                    loading={loading}
                     setValues={setValues}
                     setLoading={setLoading}
                   />
 
                   <div class="action">
-                    <button class="action-button">Submit</button>
+                    <button onClick={handleSubmit} class="action-button">
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

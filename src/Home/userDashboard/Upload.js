@@ -9,7 +9,7 @@ cloudinary.config({
   api_secret: "Dfy10-XcsTTB2JSrPZiPaF4qCW8",
 });
 
-const Uploadfile = ({ values, setValues, setLoading }) => {
+const Uploadfile = ({ loading, values, setValues, setLoading }) => {
   var result;
   var image_id;
   //config
@@ -81,44 +81,50 @@ const Uploadfile = ({ values, setValues, setLoading }) => {
 
   return (
     <>
-      <div className="row">
-        {values.images &&
-          values.images.map((image) => (
-            <>
-              <div className="col-md-3">
-                <i
-                  style={{
-                    position: "relative",
-                    left: "90%",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => handleImageRemove(image.public_id)}
-                  class="ri-close-line"
-                ></i>
-                <img
-                  src={image.url}
-                  width={100}
-                  // shape="square"
-                  className="ml-3"
-                  alt="images"
-                />
-              </div>
-            </>
-            // <Badge
-            //   count="X"
-            //   key={image.public_id}
-            //   onClick={() => handleImageRemove(image.public_id)}
-            //   style={{ cursor: "pointer" }}
-            // >
-            //   <Avatar
-            //     src={image.url}
-            //     size={100}
-            //     shape="square"
-            //     className="ml-3"
-            //   />
-            // </Badge>
-          ))}
-      </div>
+      {!loading ? (
+        <div className="row">
+          {values.images &&
+            values.images.map((image) => (
+              <>
+                <div className="col-md-3">
+                  <i
+                    style={{
+                      position: "relative",
+                      left: "90%",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => handleImageRemove(image.public_id)}
+                    class="ri-close-line"
+                  ></i>
+                  <img
+                    src={image.url}
+                    width={100}
+                    // shape="square"
+                    className="ml-3"
+                    alt="images"
+                  />
+                </div>
+              </>
+              // <Badge
+              //   count="X"
+              //   key={image.public_id}
+              //   onClick={() => handleImageRemove(image.public_id)}
+              //   style={{ cursor: "pointer" }}
+              // >
+              //   <Avatar
+              //     src={image.url}
+              //     size={100}
+              //     shape="square"
+              //     className="ml-3"
+              //   />
+              // </Badge>
+            ))}
+        </div>
+      ) : (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <i class="ri-refresh-line rotate"></i>
+        </div>
+      )}
       <br />
       <div className="row">
         <label

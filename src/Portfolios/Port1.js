@@ -6,7 +6,7 @@ const Port1 = () => {
       {" "}
       <div>
         <div className="content-wrapper">
-          <nav className="navbar center wide transparent absolute dark-wrapper bg-opacity-dark inverse-text">
+          <nav className="navbar center wide absolute dark-wrapper bg-opacity-dark inverse-text">
             <div className="flex-it">
               <div className="navbar-header align-left">
                 <div className="navbar-brand">

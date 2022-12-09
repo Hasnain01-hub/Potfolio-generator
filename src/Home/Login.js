@@ -151,35 +151,57 @@ const Login = () => {
                 </div>
                 <div className="form-group">
                   <input
-                    type="password"
+                    type={passwordShown ? "text" : "password"}
                     className="form-control"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
+                  {passwordShown ? (
+                    <i
+                      style={{
+                        position: "absolute",
+                        marginTop: "7px",
+                        marginLeft: "-20px",
+                      }}
+                      onClick={togglePasswordVisiblity}
+                      class="ri-eye-line"
+                    >
+                      {" "}
+                    </i>
+                  ) : (
+                    <i
+                      style={{
+                        position: "absolute",
+                        marginTop: "7px",
+                        marginLeft: "-20px",
+                      }}
+                      onClick={togglePasswordVisiblity}
+                      class="ri-eye-off-line"
+                    ></i>
+                  )}
                 </div>
                 <div className="row align-items-center">
-                  <div className="col-lg-6 col-md-6 col-sm-6 remember-me-wrap">
+                  {/* <div className="col-lg-6 col-md-6 col-sm-6 remember-me-wrap">
                     <p>
                       <input type="checkbox" id="test" />
                       <label htmlFor="test">Remember me</label>
                     </p>
-                  </div>
-                  <div className="col-lg-6 col-md-6 col-sm-6 lost-your-password-wrap">
+                  </div> */}
+                  {/* <div className="col-lg-6 col-md-6 col-sm-6 lost-your-password-wrap">
                     <a
                       href="forget-password.html"
                       className="lost-your-password"
                     >
                       Lost your password?
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <button type="submit" onClick={signInWithEmailAndPassword}>
                   Sign In
                 </button>
                 <span className="dont-account">
-                  Don't have an account?{" "}
-                  <Link to="/register">Sign Up Now!</Link>
+                  Don't have an account? <Link to="/signup">Sign Up Now!</Link>
                 </span>
               </form>
               <div className="sign-in-with-button">
@@ -218,7 +240,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <ul className="social-links d-flex align-items-center justify-content-center">
+      {/* <ul className="social-links d-flex align-items-center justify-content-center">
         <li>
           <span>Follow Us On:</span>
         </li>
@@ -242,7 +264,7 @@ const Login = () => {
             <i className="ri-instagram-line" />
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
   const styles = {

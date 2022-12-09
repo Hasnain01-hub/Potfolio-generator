@@ -1,14 +1,16 @@
+import Aos from "aos";
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-
+import "aos/dist/aos.css";
+Aos.init();
+// AOS.refresh();
 const Home = () => {
   return (
     <>
       <Header />
       <div>
         {/* Start Navbar Area */}
-
         {/* End Navbar Area */}
         {/* Start New App Main Banner Wrap Area */}
         <div className="new-app-main-banner-wrap-area">
@@ -371,16 +373,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="key-features-btn">
-              <a href="app-download.html" className="default-btn">
-                Start Free Trial
-              </a>
-            </div>
+            
           </div>
         </div>
         {/* End Key Features Area */}
         {/* Start App Screenshots Area */}
-        <div className="app-screenshots-area ptb-100">
+        {/* <div className="app-screenshots-area ptb-100">
           <div className="container">
             <div className="section-title">
               <span className="sub-title">APP SCREENS</span>
@@ -481,7 +479,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* End App Screenshots Area */}
         {/* Start App Video Area */}
         <div className="app-video-area pb-100">
@@ -533,14 +531,14 @@ const Home = () => {
               <div className="col-lg-3 col-sm-6 col-md-6">
                 <div className="single-funfacts-card">
                   <div className="icon">
-                    <i className="ri-download-2-line" />
+                  <i class="ri-server-fill"></i>
                   </div>
-                  <p>Total Downloads</p>
+                  <p>Portfolio Hosted</p>
                   <h3>
-                    <span className="odometer" data-count={10}>
+                    <span className="odometer" data-count={200}>
                       00
                     </span>
-                    <span className="sign">M</span>
+                    <span className="sign">+</span>
                   </h3>
                 </div>
               </div>
@@ -551,7 +549,7 @@ const Home = () => {
                   </div>
                   <p>Total Reviews</p>
                   <h3>
-                    <span className="odometer" data-count={799}>
+                    <span className="odometer" data-count={2}>
                       00
                     </span>
                     <span className="sign">K</span>
@@ -565,7 +563,7 @@ const Home = () => {
                   </div>
                   <p>Worldwide Countries</p>
                   <h3>
-                    <span className="odometer" data-count={150}>
+                    <span className="odometer" data-count={10}>
                       00
                     </span>
                     <span className="sign">+</span>
@@ -582,7 +580,7 @@ const Home = () => {
                     <span className="odometer" data-count={5}>
                       00
                     </span>
-                    <span className="sign">M</span>
+                    <span className="sign">k</span>
                   </h3>
                 </div>
               </div>
@@ -591,65 +589,7 @@ const Home = () => {
         </div>
         {/* End Gradient Funfacts Area */}
         {/* Start New App Download Area */}
-        {/* <div className="new-app-download-wrap-area ptb-100">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="new-app-download-content">
-                  <span className="sub-title">DOWNLOAD APP</span>
-                  <h2>Let's Get Your Free Copy From Apple and Play Store</h2>
-                  <p>
-                    Instant free download from store Cloud based storage for
-                    your data backup just log in with your mail account from
-                    play store and using whatever you want for your business
-                    purpose orem ipsum dummy text.
-                  </p>
-                  <div className="btn-box color-wrap">
-                    <a href="#/" className="playstore-btn" target="_blank">
-                      <img src="assets/ast/img/play-store.png" alt="disp" />
-                      Get It On
-                      <span>Google Play</span>
-                    </a>
-                    <a href="#/" className="applestore-btn" target="_blank">
-                      <img src="assets/ast/img/apple-store.png" alt="disp" />
-                      Download on the
-                      <span>Apple Store</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 col-md-12">
-                <div
-                  className="new-app-download-image text-end"
-                  data-aos="fade-up"
-                >
-                  <img
-                    src="assets/ast/img/more-home/app-download/download-2.png"
-                    alt="app-img"
-                  />
-                  <div className="download-circle">
-                    <img
-                      src="assets/ast/img/more-home/app-download/download-circle.png"
-                      alt="disp"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="app-download-shape-1">
-            <img
-              src="assets/ast/img/more-home/app-download/shape-1.png"
-              alt="disp"
-            />
-          </div>
-          <div className="app-download-shape-2">
-            <img
-              src="assets/ast/img/more-home/app-download/shape-2.png"
-              alt="disp"
-            />
-          </div>
-        </div> */}
+
         {/* End New App Download Area */}
         {/* Start Feedback Wrap Area */}
         <div className="feedback-wrap-area ptb-100">
@@ -845,7 +785,7 @@ const Home = () => {
         </div>
         {/* End App Pricing Area */}
         {/* Start Blog Wrap Area */}
-        <div className="blog-area pb-75">
+        {/* <div className="blog-area pb-75">
           <div className="container">
             <div className="section-title">
               <span className="sub-title">BLOG POST</span>
@@ -951,7 +891,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* End Blog Wrap Area */}
         {/* Start Partner Area */}
         <div className="partner-area pb-100">

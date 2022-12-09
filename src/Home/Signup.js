@@ -4,6 +4,8 @@ import "./login.css";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { auth, db } from "../Firebase";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -94,9 +96,75 @@ function Signup() {
       cursor: "pointer",
     },
   };
+  const Signupform = () => (
+    <div className="profile-authentication-area">
+      <div className="d-table">
+        <div className="d-table-cell">
+          <div className="container">
+            <div className="signin-form">
+              <h2 style={{ fontWeight: "bold" }}>Sign Up</h2>
+              <form>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type={passwordShown ? "text" : "password"}
+                    className="form-control"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setpassword(e.target.value)}
+                  />
+                  {passwordShown ? (
+                    <i
+                      style={{
+                        position: "absolute",
+                        marginTop: "7px",
+                        marginLeft: "-20px",
+                      }}
+                      onClick={togglePasswordVisiblity}
+                      class="ri-eye-line"
+                    >
+                      {" "}
+                    </i>
+                  ) : (
+                    <i
+                      style={{
+                        position: "absolute",
+                        marginTop: "7px",
+                        marginLeft: "-20px",
+                      }}
+                      onClick={togglePasswordVisiblity}
+                      class="ri-eye-off-line"
+                    ></i>
+                  )}
+                </div>
+                {/* <div className="row align-items-center">
+              
+            </div> */}
+                <button type="submit" onClick={registerWithEmailAndPassword}>
+                  Sign Up
+                </button>
+                <span className="dont-account">
+                  Already have an account?{" "}
+                  <Link to="/login">Login Up Now!</Link>
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
   return (
     <>
-      <div id="card">
+      {/* <div id="card">
         <div id="card-content">
           <div id="card-title">
             <span className="register">Register</span>
@@ -165,7 +233,12 @@ function Signup() {
           </form>
         </div>
         <Toaster />
-      </div>
+      </div> */}
+      <Header />
+      {Signupform()}
+
+      <Toaster />
+      <Footer />
     </>
   );
 }

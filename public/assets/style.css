@@ -765,7 +765,7 @@ acronym[title] {
   position: absolute;
 }
 .navbar.transparent:not(.banner--clone) {
-  background: none;
+  /* background: none; */
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2700,7 +2700,7 @@ ol {
   display: inline-block;
 }
 .icon:not(.icon-img) {
-  line-height: 1;
+  line-height: 2;
 }
 .icon p {
   color: #707070;

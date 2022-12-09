@@ -34,7 +34,11 @@ const Header = () => {
           <div className="pakap-responsive-menu">
             <div className="logo">
               <Link to="/">
-                <img src="assets/ast/img/black-logo.png" alt="logo" />
+                {/* <img src="assets/ast/img/black-logo.png" alt="logo" /> */}
+                <b>
+                  {" "}
+                  <h1 style={{ fontWeight: " bold" }}>Portfolio Generator</h1>
+                </b>
               </Link>
             </div>
           </div>
@@ -44,7 +48,10 @@ const Header = () => {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/">
-              <img src="assets/ast/img/black-logo.png" alt="logo" />
+              {/* <img src="assets/ast/img/black-logo.png" alt="logo" /> */}
+              <b>
+                <h1 style={{ fontWeight: " bold" }}>Portfolio Generator</h1>
+              </b>
             </Link>
             <div className="collapse navbar-collapse mean-menu">
               <ul className="navbar-nav">
@@ -100,40 +107,12 @@ const Header = () => {
                     </li>
                   </ul> */}
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link to="/about" className="nav-link">
                     About Us
                   </Link>
-                  {/* <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <a href="about-simple.html" className="nav-link">
-                        About Simple
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="about-modern.html" className="nav-link">
-                        About Modern
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#/" className="dropdown-toggle nav-link">
-                        Features
-                      </a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a href="features-1.html" className="nav-link">
-                            Features 1
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a href="features-2.html" className="nav-link">
-                            Features 2
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul> */}
-                </li>
+                  
+                </li> */}
                 <li className="nav-item megamenu">
                   <a href="/" className="dropdown-toggle nav-link">
                     Pages
@@ -146,7 +125,7 @@ const Header = () => {
                             <h6 className="submenu-title">Pages I</h6>
                             <ul className="megamenu-submenu">
                               <li>
-                                <Link to="team-1.html">Team 1</Link>
+                                <Link to="/first-portfolio">Portfolio 1</Link>
                               </li>
                               <li>
                                 <a href="team-2.html">Team 2</a>
