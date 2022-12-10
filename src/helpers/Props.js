@@ -1,5 +1,4 @@
-
-import './App.css';
+import '../App.css';
 import React from "react";
 function Props({ setcounter, counter, refs }) {
   const design = () => {

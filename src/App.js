@@ -1,12 +1,13 @@
 import { React, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import { auth, db } from "./Firebase";
-import Home from "./Home/Home";
-import Login from "./Home/Login";
-import Signup from "./Home/Signup";
-import Register from "./Home/userDashboard/Register";
-import Portfolio1 from "./Portfolios/Portfolio1";
+import { auth, db } from "./helpers/Firebase";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import ProfileComplete from "./pages/Profile/ProfileComplete";
+import Template1 from "./pages/Templates/Template1";
+import { toast } from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ function App() {
                   if (doc && doc.exists) {
                     var profiledata = doc.data();
                     dispatch({
-                      type: "REGISTER_INFO",
+                      type: "PORTFOLIO_INFO",
                       payload: {
                         id: profiledata.id,
                         name: profiledata.name,
@@ -62,7 +63,7 @@ function App() {
             }
           })
           .catch((error) => {
-            console.log(error);
+            toast.error(error.message);
           });
       }
       return () => unsubscribe();
@@ -73,9 +74,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Signup} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/first-portfolio/:id" component={Portfolio1} />
+        <Route exact path="/profilecomplete" component={ProfileComplete} />
+        <Route exact path="/template1/:id" component={Template1} />
       </Switch>
       <div className="go-top">
         <i className="ri-arrow-up-s-line" />

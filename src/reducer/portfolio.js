@@ -1,6 +1,6 @@
-export const postfoliodata = (state = null, action) => {
+export const portfolioReducer = (state = null, action) => {
   switch (action.type) {
-    case "REGISTER_INFO":
+    case "PORTFOLIO_INFO":
       return action.payload;
     default:
       return state;

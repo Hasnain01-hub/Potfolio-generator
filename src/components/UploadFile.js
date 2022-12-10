@@ -1,7 +1,8 @@
-import React from "react";
+import React, { lazy } from "react";
 import Resizer from "react-image-file-resizer";
 
 const cloudinary = require("cloudinary/lib/cloudinary");
+lazy(async ()=> await import(`${cloudinary}`))
 
 cloudinary.config({
   cloud_name: "dtwkfae0p",
@@ -9,7 +10,7 @@ cloudinary.config({
   api_secret: "Dfy10-XcsTTB2JSrPZiPaF4qCW8",
 });
 
-const Uploadfile = ({ loading, values, setValues, setLoading }) => {
+const UploadFile = ({ loading, values, setValues, setLoading }) => {
   var image_id;
 
   //to upload images to cloudinary
@@ -150,4 +151,4 @@ const Uploadfile = ({ loading, values, setValues, setLoading }) => {
   );
 };
 
-export default Uploadfile;
+export default UploadFile;

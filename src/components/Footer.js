@@ -136,9 +136,9 @@ const Footer = () => {
         </div>
         <div className="copyright-area">
           <p>
-            Copyright <strong>Pakap</strong>. All Rights Reserved by{" "}
+            Copyright <strong>AStheTECH</strong>. All Rights Reserved by{" "}
             <a href="#/" target="_blank">
-              Asthtech
+              AStheTECH
             </a>
           </p>
         </div>

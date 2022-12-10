@@ -7,15 +7,19 @@ input {
   appearance: none;
   border-radius: 0;
 }
+
 .containerevent {
   margin-top: 13vh;
 }
+
 input[type="text"] {
   background: none !important;
 }
+
 .row {
   justify-content: center;
 }
+
 .cardevent {
   margin-left: auto;
   margin-right: auto;
@@ -28,15 +32,18 @@ input[type="text"] {
   box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
   padding: 13px;
 }
+
 .eventgif {
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .titleevent {
   position: absolute;
   bottom: 0;
 }
+
 /* .card-image {
     border-radius: 8px;
     overflow: hidden;
@@ -61,6 +68,7 @@ input[type="text"] {
   color: #735400;
   line-height: 1.222;
 }
+
 .card-heading small {
   display: block;
   font-size: 0.75em;
@@ -78,7 +86,8 @@ input[type="text"] {
   position: relative;
   padding-top: 1.5rem;
 }
-.input + .input {
+
+.input+.input {
   margin-top: 1.5rem;
 }
 
@@ -98,13 +107,15 @@ input[type="text"] {
   font-size: 1.125rem;
   padding: 0.25rem 0;
 }
+
 .input-field:focus,
 .input-field:valid {
   outline: 0;
   border-bottom-color: #6658d3;
 }
-.input-field:focus + .input-label,
-.input-field:valid + .input-label {
+
+.input-field:focus+.input-label,
+.input-field:valid+.input-label {
   color: #6658d3;
   transform: translateY(-1.5rem);
 }
@@ -124,6 +135,7 @@ input[type="text"] {
   color: #fff;
   border: 0;
 }
+
 .action-button:focus {
   outline: 0;
 }
@@ -134,17 +146,20 @@ input[type="text"] {
   font-size: 0.875rem;
   color: #8597a3;
 }
+
 .card-info a {
   display: block;
   color: #6658d3;
   text-decoration: none;
 }
+
 /* Loading icon in register form */
 .rotate {
   font-size: 25px;
   text-align: center;
   animation: rotate 1.5s linear infinite;
 }
+
 @keyframes rotate {
   to {
     transform: rotate(360deg);
