@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Carousel } from "react-responsive-carousel";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 const userData = {
   name: "John Doe",
   profession:
@@ -26,7 +24,6 @@ const userData = {
 };
 const Portfolio1 = () => {
   const { postfoliodata } = useSelector((state) => ({ ...state }));
-  // const { user } = useSelector((state) => ({ ...state }));
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   React.useEffect(() => {
@@ -75,13 +72,6 @@ const Portfolio1 = () => {
                           Home
                         </a>{" "}
                       </li>
-
-                      {/* <li>
-                        <a href="#fashion" className="scroll">
-                          Fashion
-                        </a>{" "}
-                      </li> */}
-
                       <li>
                         <a href="#about" className="scroll">
                           About
@@ -177,51 +167,6 @@ const Portfolio1 = () => {
                 </div>
               </div>
             </section>
-
-            {/* <section id="black-white">
-              <div className="wrapper light-wrapper">
-                <div className="container inner pb-40">
-                  <h2 className="section-title text-center">
-                    Black &amp; White Photograpy
-                  </h2>
-                  <p className="lead text-center mb-0">
-                    I take photographs with creativity, concept and passion
-                  </p>
-                </div>
-
-                <div class="carousel slide" id="myCarousel">
-                  <div class="carousel-inner">
-                    {data.images.map((img) => {
-                      return (
-                        <div class="item active">
-                          <div class="col-xs-2">
-                            <div>
-                              <img src={img.url} class="img-responsive" />
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                    <a
-                      class="left carousel-control"
-                      href="#myCarousel"
-                      data-slide="prev"
-                    >
-                      <i class="glyphicon glyphicon-chevron-left"></i>
-                    </a>
-                    <a
-                      class="right carousel-control"
-                      href="#myCarousel"
-                      data-slide="next"
-                    >
-                      <i class="glyphicon glyphicon-chevron-right"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="space90" />
-              </div>
-            </section> */}
             <section id="about">
               <div className="wrapper gray-wrapper">
                 <div className="container inner">
@@ -265,11 +210,6 @@ const Portfolio1 = () => {
                     <div className="col-sm-4">
                       <h3>Why Choose Me?</h3>
                       <p>{data.whychooseme}</p>
-                      {/* <ol>
-                        <li>Vivamus sagittis lacus vel augue laoreet.</li>
-                        <li>Cras mattis consectetur purus sit amet.</li>
-                        <li>Vestibulum id ligula porta felis euismod.</li>
-                      </ol> */}
                     </div>
                   </div>
 
@@ -352,9 +292,7 @@ const Portfolio1 = () => {
                   </li>
                 </ul>
               </div>
-              {/* /.container */}
             </div>
-            {/* /.sub-footer */}
           </footer>
         </div>
       ) : (

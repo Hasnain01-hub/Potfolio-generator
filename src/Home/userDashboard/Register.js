@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import { db } from "../../Firebase";
 import Header from "../Header";
 import Footer from "../Footer";
+
 const Register = () => {
   const initialState = {
     name: "",
@@ -58,8 +59,6 @@ const Register = () => {
           aboutme: values.aboutme,
         })
         .then((res) => {
-          console.log(res);
-          // alert(`"${values.event}" is added`);
           toast.success(`Added ${values.name} to the database`);
           dispatch({
             type: "REGISTER_INFO",
@@ -79,13 +78,9 @@ const Register = () => {
             },
           });
           setValues(initialState);
-          // window.location.reload();
         })
         .catch((err) => {
-          console.log(err);
-          // alert("Event added");
           window.location.reload();
-          // alert(err.response.data.err);
         });
     } else {
       toast.error("Please fill all the fields");

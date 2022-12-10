@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from "react";
-import { Outlet, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoadingToRedirect from "./LoadingToRedirect";
 import { db } from "../Firebase";
-
 
 const AdminRoute = ({ children, ...rest }) => {
   const { user } = useSelector((state) => ({ ...state }));
@@ -18,7 +19,6 @@ const AdminRoute = ({ children, ...rest }) => {
         .then((doc) => {
           if (doc && doc.exists) {
             separatedString = doc.data();
-            //use separatedString
           }
           if (separatedString.role == "admin") {
             setOk(true);
@@ -31,7 +31,6 @@ const AdminRoute = ({ children, ...rest }) => {
         });
     }
   }, [user]);
-
   return ok ? <Route {...rest} /> : <LoadingToRedirect />;
 };
 

@@ -17,7 +17,6 @@ function App() {
         const idTokenResult = await user.getIdTokenResult();
         await db
           .collection("users")
-          // .where('uid', '==', user.email)
           .doc(user.email)
           .get()
           .then(async (doc) => {
@@ -36,13 +35,11 @@ function App() {
               });
               await db
                 .collection("user-profile")
-                // .where('uid', '==', user.email)
                 .doc(user.email)
                 .get()
                 .then((doc) => {
                   if (doc && doc.exists) {
                     var profiledata = doc.data();
-                    //use separatedString
                     dispatch({
                       type: "REGISTER_INFO",
                       payload: {
@@ -59,7 +56,6 @@ function App() {
                         whychooseme: profiledata.whychooseme,
                         aboutme: profiledata.aboutme,
                       },
-                      // REGISTER_INFO
                     });
                   }
                 });

@@ -11,14 +11,14 @@ cloudinary.config({
 
 const Uploadfile = ({ loading, values, setValues, setLoading }) => {
   var image_id;
-  //config
 
   //to upload images to cloudinary
   const upload = async (uri) => {
-    await cloudinary.uploader.upload(uri, {
+    var result = await cloudinary.uploader.upload(uri, {
       public_id: `${Date.now()}`,
       resource_type: "auto",
     });
+    return result;
   };
   //to remove uploaded images to cloudinary
   const remove = async (public_id) => {
@@ -33,8 +33,8 @@ const Uploadfile = ({ loading, values, setValues, setLoading }) => {
   const fileUploadAndResize = (e) => {
     let files = e.target.files;
     let allUploadedFiles = values.images;
-
     if (files) {
+      console.log(files);
       setLoading(true);
       for (let i = 0; i < files.length; i++) {
         Resizer.imageFileResizer(
@@ -46,14 +46,13 @@ const Uploadfile = ({ loading, values, setValues, setLoading }) => {
           0,
           (uri) => {
             upload(uri)
-              .then((result) => {
+              .then((res) => {
                 setLoading(false);
-                allUploadedFiles.push(result);
+                allUploadedFiles.push(res);
                 setValues({ ...values, images: allUploadedFiles });
               })
               .catch((err) => {
                 setLoading(false);
-                console.log("UPLOAD EROR", err);
               });
           },
           "base64"
@@ -73,7 +72,6 @@ const Uploadfile = ({ loading, values, setValues, setLoading }) => {
         setValues({ ...values, images: filteredImages });
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
       });
   };

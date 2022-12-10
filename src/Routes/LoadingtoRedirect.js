@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import Page from "./asset/pagenotfound.json";
 
 import "./errorpage.css";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const LoadingToRedirect = () => {
   const [count, setCount] = useState(5);
   let history = useHistory();
