@@ -6,8 +6,7 @@ import { auth } from "../helpers/Firebase";
 
 const Header = () => {
   const { user } = useSelector((state) => ({ ...state }));
-  const { portfolio } = useSelector((state) => ({ ...state }));
-  
+
   let history = useHistory();
   const logout = () => {
     auth.signOut();
@@ -45,7 +44,6 @@ const Header = () => {
                   <Link to="/" className="nav-link active">
                     Home
                   </Link>
-
                 </li>
 
                 <li className="nav-item megamenu">
@@ -61,8 +59,7 @@ const Header = () => {
                             <ul className="megamenu-submenu">
                               <li>
                                 <a
-                                  href={`/template1/${portfolio ? portfolio.id : "1"
-                                    }`}
+                                  href={`/template1/${user ? user.name : "1"}`}
                                 >
                                   Portfolio 1
                                 </a>
@@ -75,7 +72,6 @@ const Header = () => {
                               </li>
                             </ul>
                           </div>
-
                         </div>
                       </div>
                     </li>
@@ -85,7 +81,6 @@ const Header = () => {
                   <Link to="/" className="nav-link">
                     Contact
                   </Link>
-
                 </li>
 
                 {user ? (
@@ -101,7 +96,6 @@ const Header = () => {
                   <Link to="/" className="nav-link">
                     Pricing
                   </Link>
-
                 </li>
                 {!user ? (
                   <li className="nav-item">

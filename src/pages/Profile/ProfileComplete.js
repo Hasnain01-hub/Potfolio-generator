@@ -43,7 +43,7 @@ const ProfileComplete = () => {
       }
       await db
         .collection("user-profile")
-        .doc(user.email)
+        .doc(user.name)
         .set({
           id: id,
           name: values.name,
@@ -60,23 +60,7 @@ const ProfileComplete = () => {
         })
         .then((res) => {
           toast.success(`Added ${values.name} to the database`);
-          dispatch({
-            type: "PORTFOLIO_INFO",
-            payload: {
-              id: id,
-              name: values.name,
-              instagram: values.instagram,
-              email: user.email,
-              youtube: values.youtube,
-              location: values.location,
-              phone: values.phone,
-              images: values.images,
-              achievenemt: values.achievenemt,
-              profession: values.profession,
-              whychooseme: values.whychooseme,
-              aboutme: values.aboutme,
-            },
-          });
+
           setValues(initialState);
         })
         .catch((err) => {

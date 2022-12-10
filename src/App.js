@@ -34,32 +34,6 @@ function App() {
                   id: separatedString1.email,
                 },
               });
-              await db
-                .collection("user-profile")
-                .doc(user.email)
-                .get()
-                .then((doc) => {
-                  if (doc && doc.exists) {
-                    var profiledata = doc.data();
-                    dispatch({
-                      type: "PORTFOLIO_INFO",
-                      payload: {
-                        id: profiledata.id,
-                        name: profiledata.name,
-                        instagram: profiledata.instagram,
-                        email: user.email,
-                        youtube: profiledata.youtube,
-                        phone: profiledata.phone,
-                        location: profiledata.location,
-                        images: profiledata.images,
-                        achievenemt: profiledata.achievenemt,
-                        profession: profiledata.profession,
-                        whychooseme: profiledata.whychooseme,
-                        aboutme: profiledata.aboutme,
-                      },
-                    });
-                  }
-                });
             }
           })
           .catch((error) => {
