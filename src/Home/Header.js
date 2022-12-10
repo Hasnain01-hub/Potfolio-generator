@@ -5,22 +5,8 @@ import { Link, useHistory } from "react-router-dom";
 import { auth } from "../Firebase";
 const Header = () => {
   const { user } = useSelector((state) => ({ ...state }));
-  const styles = {
-    Login: {
-      background: "white",
-      padding: "0 10px",
-      width: "auto",
-      height: "37px",
-      marginTop: "18px",
+  const { postfoliodata } = useSelector((state) => ({ ...state }));
 
-      color: "black",
-      fontSize: "15px",
-      borderRadius: "15px",
-      border: "none",
-      boxShadow: "0px 0px 3px 0px #09ab1b",
-      cursor: "pointer",
-    },
-  };
   let history = useHistory();
   const logout = () => {
     auth.signOut();
@@ -115,36 +101,33 @@ const Header = () => {
                 </li> */}
                 <li className="nav-item megamenu">
                   <a href="/" className="dropdown-toggle nav-link">
-                    Pages
+                    Themes
                   </a>
                   <ul className="dropdown-menu">
                     <li className="nav-item">
                       <div className="container">
                         <div className="row">
                           <div className="col">
-                            <h6 className="submenu-title">Pages I</h6>
+                            <h6 className="submenu-title">Design</h6>
                             <ul className="megamenu-submenu">
                               <li>
-                                <Link to="/first-portfolio">Portfolio 1</Link>
+                                <a
+                                  href={`/first-portfolio/${
+                                    postfoliodata ? postfoliodata.id : "1"
+                                  }`}
+                                >
+                                  Portfolio 1
+                                </a>
                               </li>
                               <li>
-                                <a href="team-2.html">Team 2</a>
+                                <a href="team-2.html">Portfolio 2</a>
                               </li>
                               <li>
-                                <a href="how-it-works.html">How It Works</a>
-                              </li>
-                              <li>
-                                <a href="gallery.html">Gallery</a>
-                              </li>
-                              <li>
-                                <a href="services.html">Services</a>
-                              </li>
-                              <li>
-                                <a href="pricing.html">Pricing Plan</a>
+                                <a href="how-it-works.html">Portfolio 3</a>
                               </li>
                             </ul>
                           </div>
-                          <div className="col">
+                          {/* <div className="col">
                             <h6 className="submenu-title">Pages II</h6>
                             <ul className="megamenu-submenu">
                               <li>
@@ -170,8 +153,8 @@ const Header = () => {
                                 </a>
                               </li>
                             </ul>
-                          </div>
-                          <div className="col">
+                          </div> */}
+                          {/* <div className="col">
                             <h6 className="submenu-title">Pages III</h6>
                             <ul className="megamenu-submenu">
                               <li>
@@ -193,16 +176,7 @@ const Header = () => {
                                 <a href="contact.html">Contact Us</a>
                               </li>
                             </ul>
-                          </div>
-                          <div className="col">
-                            <a
-                              href="#/"
-                              target="_blank"
-                              className="d-block p-0"
-                            >
-                              <img src="assets/ast/img/navbar.jpg" alt="disp" />
-                            </a>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </li>

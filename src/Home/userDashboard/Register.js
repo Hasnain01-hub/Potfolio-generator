@@ -10,10 +10,15 @@ import Footer from "../Footer";
 const Register = () => {
   const initialState = {
     name: "",
-    insta: "",
+    instagram: "",
     youtube: "",
     location: "",
     images: [],
+    phone: "",
+    achievenemt: "",
+    profession: "",
+    whychooseme: "",
+    aboutme: "",
   };
   const [loading, setLoading] = useState(false);
   var id = uuidv4();
@@ -25,7 +30,13 @@ const Register = () => {
   let dispatch = useDispatch();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (values.event !== "" && values.date !== "" && values.desc !== "") {
+    if (
+      values.name !== "" &&
+      values.profession !== "" &&
+      values.aboutme !== "" &&
+      values.instagram !== "" &&
+      values.whychooseme !== ""
+    ) {
       if (values.images.length < 2) {
         return toast.error("Please add 6 images");
       }
@@ -35,11 +46,16 @@ const Register = () => {
         .set({
           id: id,
           name: values.name,
-          insta: values.insta,
+          instagram: values.instagram,
           email: user.email,
           youtube: values.youtube,
           location: values.location,
           images: values.images,
+          phone: values.phone,
+          achievenemt: values.achievenemt,
+          profession: values.profession,
+          whychooseme: values.whychooseme,
+          aboutme: values.aboutme,
         })
         .then((res) => {
           console.log(res);
@@ -48,12 +64,18 @@ const Register = () => {
           dispatch({
             type: "REGISTER_INFO",
             payload: {
+              id: id,
               name: values.name,
-              insta: values.insta,
+              instagram: values.instagram,
               email: user.email,
               youtube: values.youtube,
               location: values.location,
+              phone: values.phone,
               images: values.images,
+              achievenemt: values.achievenemt,
+              profession: values.profession,
+              whychooseme: values.whychooseme,
+              aboutme: values.aboutme,
             },
           });
           setValues(initialState);
@@ -94,8 +116,8 @@ const Register = () => {
                   <div className="form-group">
                     <input
                       type="url"
-                      name="insta"
-                      value={values.insta}
+                      name="instagram"
+                      value={values.instagram}
                       onChange={handleChange}
                       class="form-control"
                       placeholder="Instagram Link"
@@ -116,6 +138,18 @@ const Register = () => {
                   <div className="form-group">
                     <input
                       type="name"
+                      maxLength={10}
+                      value={values.phone}
+                      name="phone"
+                      onChange={handleChange}
+                      class="form-control"
+                      placeholder="Youtube Channel Link"
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="name"
                       name="location"
                       onChange={handleChange}
                       value={values.location}
@@ -124,17 +158,52 @@ const Register = () => {
                       placeholder="Enter Your Location"
                     />
                   </div>
-                  {/* <div class="input">
-      <input
-        type="file"
-        onChange={handleChange}
-        name="images"
-        class="input-field"
-        required
-      />
+                  <div className="form-group">
+                    <input
+                      type="aboutme"
+                      name="aboutme"
+                      onChange={handleChange}
+                      value={values.aboutme}
+                      class="form-control"
+                      required
+                      placeholder="About Me"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="whychooseme"
+                      name="whychooseme"
+                      onChange={handleChange}
+                      value={values.whychooseme}
+                      class="form-control"
+                      required
+                      placeholder="Why choose me"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="achievenemt"
+                      name="achievenemt"
+                      onChange={handleChange}
+                      value={values.achievenemt}
+                      class="form-control"
+                      required
+                      placeholder="Your Achievenemt"
+                    />
+                  </div>
 
-      <label class="input-label">Image</label>
-      </div> */}
+                  <div className="form-group">
+                    <input
+                      type="profession"
+                      name="profession"
+                      onChange={handleChange}
+                      value={values.profession}
+                      class="form-control"
+                      required
+                      placeholder="Short Description about your Profession"
+                    />
+                  </div>
+
                   <Uploadfile
                     values={values}
                     loading={loading}

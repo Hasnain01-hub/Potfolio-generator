@@ -80,22 +80,7 @@ function Signup() {
       toast.error("Registration Failed");
     }
   };
-  const style = {
-    Login: {
-      background: "#09ab1b",
-      padding: "11px",
-      fontSize: "20px",
-      marginLeft: "44px",
-      fontWeight: "bold",
-      color: "white",
-      borderRadius: "15px",
-      marginBottom: "10px",
-      height: "auto",
-      border: "none",
-      boxShadow: "0px 0px 10px 0px #09ab1b",
-      cursor: "pointer",
-    },
-  };
+
   const Signupform = () => (
     <div className="profile-authentication-area">
       <div className="d-table">

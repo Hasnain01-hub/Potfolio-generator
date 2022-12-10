@@ -1,4 +1,4 @@
-import { React, Suspense, useEffect } from "react";
+import { React, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { auth, db } from "./Firebase";
@@ -6,11 +6,11 @@ import Home from "./Home/Home";
 import Login from "./Home/Login";
 import Signup from "./Home/Signup";
 import Register from "./Home/userDashboard/Register";
-import Port1 from "./Portfolios/Port1";
+import Portfolio1 from "./Portfolios/Portfolio1";
 
 function App() {
   const dispatch = useDispatch();
-  var separatedString1;
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
@@ -22,7 +22,7 @@ function App() {
           .get()
           .then(async (doc) => {
             if (doc && doc.exists) {
-              separatedString1 = doc.data();
+              var separatedString1 = doc.data();
 
               dispatch({
                 type: "USERS_LOGGED",
@@ -46,13 +46,18 @@ function App() {
                     dispatch({
                       type: "REGISTER_INFO",
                       payload: {
-                        name: profiledata.name,
-                        email: profiledata.email,
-                        images: profiledata.images,
-                        loaction: profiledata.loaction,
-                        youtube: profiledata.youtube,
-                        insta: profiledata.insta,
                         id: profiledata.id,
+                        name: profiledata.name,
+                        instagram: profiledata.instagram,
+                        email: user.email,
+                        youtube: profiledata.youtube,
+                        phone: profiledata.phone,
+                        location: profiledata.location,
+                        images: profiledata.images,
+                        achievenemt: profiledata.achievenemt,
+                        profession: profiledata.profession,
+                        whychooseme: profiledata.whychooseme,
+                        aboutme: profiledata.aboutme,
                       },
                       // REGISTER_INFO
                     });
@@ -74,7 +79,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/first-portfolio" component={Port1} />
+        <Route exact path="/first-portfolio/:id" component={Portfolio1} />
       </Switch>
       <div className="go-top">
         <i className="ri-arrow-up-s-line" />

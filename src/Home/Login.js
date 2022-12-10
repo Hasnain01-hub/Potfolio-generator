@@ -267,39 +267,7 @@ const Login = () => {
       </ul> */}
     </div>
   );
-  const styles = {
-    Google: {
-      background: "red",
-      padding: "11px",
 
-      marginLeft: "14px",
-      fontWeight: "bold",
-      color: "white",
-      borderRadius: "15px",
-      marginBottom: "10px",
-      marginTop: "10px",
-      height: "auto",
-      border: "none",
-      boxShadow: "0px 0px 10px 0px red",
-      cursor: "pointer",
-      fontSize: "20px",
-    },
-    Login: {
-      background: "#09ab1b",
-      padding: "11px",
-
-      fontSize: "20px",
-      marginLeft: "44px",
-      fontWeight: "bold",
-      color: "white",
-      borderRadius: "15px",
-      marginBottom: "10px",
-      height: "auto",
-      border: "none",
-      boxShadow: "0px 0px 10px 0px #09ab1b",
-      cursor: "pointer",
-    },
-  };
   return (
     <>
       <Header />

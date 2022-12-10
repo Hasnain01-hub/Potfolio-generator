@@ -10,13 +10,12 @@ cloudinary.config({
 });
 
 const Uploadfile = ({ loading, values, setValues, setLoading }) => {
-  var result;
   var image_id;
   //config
 
   //to upload images to cloudinary
   const upload = async (uri) => {
-    result = await cloudinary.uploader.upload(uri, {
+    await cloudinary.uploader.upload(uri, {
       public_id: `${Date.now()}`,
       resource_type: "auto",
     });
@@ -47,7 +46,7 @@ const Uploadfile = ({ loading, values, setValues, setLoading }) => {
           0,
           (uri) => {
             upload(uri)
-              .then((res) => {
+              .then((result) => {
                 setLoading(false);
                 allUploadedFiles.push(result);
                 setValues({ ...values, images: allUploadedFiles });
