@@ -23,6 +23,7 @@ const Template1 = () => {
           if (doc && doc.exists) {
             setData(doc.data());
           }
+          setData(userData);
           setLoading(true);
         })
         .catch((error) => {});
@@ -32,10 +33,7 @@ const Template1 = () => {
     }
   }, []);
   const loaddata = async () => {
-    return await db
-      .collection("user-profile")
-      .doc("hasnainsayyed833@gmail.com")
-      .get();
+    return await db.collection("user-profile").doc(id.id).get();
   };
   return (
     <>
