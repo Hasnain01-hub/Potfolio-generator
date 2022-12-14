@@ -8,6 +8,8 @@ import Register from "./pages/Auth/Register";
 import ProfileComplete from "./pages/Profile/ProfileComplete";
 import Template1 from "./pages/Templates/Template1";
 import { toast } from "react-hot-toast";
+import Template2 from "./pages/Templates/Template2";
+import Template3 from "./pages/Templates/Template3";
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +54,8 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/profilecomplete" component={ProfileComplete} />
         <Route exact path="/template1/:id" component={Template1} />
+        <Route exact path="/template2/:id" component={Template2} />
+        <Route exact path="/template3/:id" component={Template3} />
       </Switch>
       <div className="go-top">
         <i className="ri-arrow-up-s-line" />

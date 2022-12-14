@@ -26,7 +26,7 @@ const Template1 = () => {
             // if (doc.data() == undefined) {
             //   setData(userData);
             // }
-          })
+          });
           setLoading(true);
         })
         .catch(() => {});
