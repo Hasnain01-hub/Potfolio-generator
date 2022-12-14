@@ -11,34 +11,35 @@ import { db } from "../../helpers/Firebase";
 const userData = dummyData.userData;
 
 const Template1 = () => {
-  const [data, setData] = React.useState({});
+  const [data, setData] = React.useState();
 
   const id = useParams();
   const [loading, setLoading] = React.useState(false);
 
   useEffect(() => {
-    if (id.id != "1") {
+    if (id.id !== "1") {
       loaddata()
-        .then((doc) => {
-          if (doc && doc.exists) {
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
             setData(doc.data());
-          }
-          setData(userData);
+            setLoading(true);
+            // if (doc.data() == undefined) {
+            //   setData(userData);
+            // }
+          })
           setLoading(true);
         })
-        .catch((error) => {});
+        .catch(() => {});
     } else {
       setData(userData);
       setLoading(true);
     }
   }, []);
   const loaddata = async () => {
-    return await db.collection("user-profile").doc(id.id).get();
+    return await db.collection("users").where("userid", "==", id.id).get();
   };
   return (
     <>
-      {console.log("&&&&&&&&&&&&&&&navbar")}
-      {console.log(data)}
       {loading ? (
         <div>
           <div className="content-wrapper">

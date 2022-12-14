@@ -18,13 +18,14 @@ const ProfileComplete = () => {
     phone: "",
     achievenemt: "",
     profession: "",
-    whychooseme: "",
+    // whychooseme: "",
     aboutme: "",
   };
   const [loading, setLoading] = useState(false);
   var id = uuidv4();
   const { user } = useSelector((state) => ({ ...state }));
   const [values, setValues] = useState(initialState);
+  const random = Math.floor(Math.random() * (999 - 100 + 1) + 100);
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -36,26 +37,28 @@ const ProfileComplete = () => {
       values.profession !== "" &&
       values.aboutme !== "" &&
       values.instagram !== "" &&
-      values.whychooseme !== ""
+      values.achievenemt !== ""
     ) {
       if (values.images.length < 2) {
         return toast.error("Please add 6 images");
       }
+      const userid = `${user.email.substring(0, 4)}${random}`;
       await db
-        .collection("user-profile")
-        .doc(user.name)
-        .set({
+        .collection("users")
+        .doc(user.email)
+        .update({
           id: id,
           name: values.name,
           instagram: values.instagram,
           email: user.email,
           youtube: values.youtube,
+          userid: userid,
           location: values.location,
           images: values.images,
           phone: values.phone,
           achievenemt: values.achievenemt,
           profession: values.profession,
-          whychooseme: values.whychooseme,
+          // whychooseme: values.whychooseme,
           aboutme: values.aboutme,
         })
         .then((res) => {
@@ -79,7 +82,7 @@ const ProfileComplete = () => {
           <div className="d-table-cell">
             <div className="container">
               <div className="signin-form">
-                <h2 style={{ fontWeight: "bold" }}>Register</h2>
+                <h2 style={{ fontWeight: "bold" }}>Create Portfolio</h2>
                 <ProfileCompleteForm
                   loading={loading}
                   values={values}

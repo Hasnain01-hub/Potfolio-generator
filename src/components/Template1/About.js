@@ -36,10 +36,10 @@ const About = ({ data }) => {
               <p className="lead">{data.achievenemt}</p>
             </div>
 
-            <div className="col-sm-4">
+            {/* <div className="col-sm-4">
               <h3>Why Choose Me?</h3>
               <p>{data.whychooseme}</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="space10" />
@@ -50,3 +50,4 @@ const About = ({ data }) => {
 };
 
 export default About;
+// i am gandu

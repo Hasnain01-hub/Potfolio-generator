@@ -239,6 +239,10 @@ website:   	http://www.themepunch.com
   position: relative;
   overflow: visible;
 }
+.imageslider {
+  position: relative;
+  overflow: visible;
+}
 .entry-content .rev_slider a,
 .rev_slider a {
   box-shadow: none;
@@ -283,14 +287,14 @@ website:   	http://www.themepunch.com
   top: 0;
   left: 0;
 }
-.rev_slider > ul > li,
+/* .rev_slider > ul > li,
 .rev_slider > ul > li:before,
 .tp-revslider-mainul > li,
 .tp-revslider-mainul > li:before,
 .tp-simpleresponsive > ul > li,
 .tp-simpleresponsive > ul > li:before {
   visibility: hidden;
-}
+} */
 .tp-revslider-mainul,
 .tp-revslider-slidesli {
   padding: 0 !important;

@@ -30,6 +30,7 @@ function App() {
                   name: separatedString1.name,
                   email: separatedString1.email,
                   token: idTokenResult.token,
+                  userid: separatedString1.userid ?? false,
                   role: separatedString1.role,
                   id: separatedString1.email,
                 },

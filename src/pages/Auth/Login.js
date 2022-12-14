@@ -13,7 +13,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
-
   var separatedString;
 
   const togglePasswordVisiblity = () => {
@@ -78,6 +77,7 @@ const Login = () => {
             payload: {
               name: user.email.split("@")[0],
               email: user.email,
+
               token: idTokenResult.token,
               role: await separatedString1.role,
               id: user.email,
@@ -128,7 +128,6 @@ const Login = () => {
       toast.error("Invalid Credentials");
     }
   };
-
 
   return (
     <>

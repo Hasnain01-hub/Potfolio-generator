@@ -2,12 +2,12 @@ import React, { lazy } from "react";
 import Resizer from "react-image-file-resizer";
 
 const cloudinary = require("cloudinary/lib/cloudinary");
-lazy(async ()=> await import(`${cloudinary}`))
+lazy(async () => await import(`${cloudinary}`));
 
 cloudinary.config({
-  cloud_name: "dtwkfae0p",
-  api_key: "459219175487354",
-  api_secret: "Dfy10-XcsTTB2JSrPZiPaF4qCW8",
+  cloud_name: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.REACT_APP_CLOUDINARY_API_KEY,
+  api_secret: process.env.REACT_APP_CLOUDINARY_API_SECRET,
 });
 
 const UploadFile = ({ loading, values, setValues, setLoading }) => {
@@ -92,7 +92,7 @@ const UploadFile = ({ loading, values, setValues, setLoading }) => {
                       cursor: "pointer",
                     }}
                     onClick={() => handleImageRemove(image.public_id)}
-                    class="ri-close-line"
+                    className="ri-close-line"
                   ></i>
                   <img
                     src={image.url}
@@ -139,7 +139,7 @@ const UploadFile = ({ loading, values, setValues, setLoading }) => {
           <input
             type="file"
             name="images"
-            class="input-field"
+            className="input-field"
             hidden
             multiple
             accept="images/*"

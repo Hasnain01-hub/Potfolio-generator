@@ -35,7 +35,7 @@ const LoginForm = ({ signInWithEmailAndPassword, email, setEmail, password, pass
                                                 marginLeft: "-20px",
                                             }}
                                             onClick={togglePasswordVisiblity}
-                                            class="ri-eye-line"
+                                            className="ri-eye-line"
                                         >
                                             {" "}
                                         </i>
@@ -47,7 +47,7 @@ const LoginForm = ({ signInWithEmailAndPassword, email, setEmail, password, pass
                                                 marginLeft: "-20px",
                                             }}
                                             onClick={togglePasswordVisiblity}
-                                            class="ri-eye-off-line"
+                                            className="ri-eye-off-line"
                                         ></i>
                                     )}
                                 </div>

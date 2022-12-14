@@ -1,16 +1,16 @@
 // Import the functions you need from the SDKs you need
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBQO5QS-FX2g48lZXVF1-FbE9gaW9AsiHs",
-  authDomain: "influencer-asthetech.firebaseapp.com",
-  projectId: "influencer-asthetech",
-  storageBucket: "influencer-asthetech.appspot.com",
-  messagingSenderId: "402429558961",
-  appId: "1:402429558961:web:4e2faf9658e091f8902290",
-  measurementId: "G-YC9NRK231W"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN_AUTH,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBADSE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
@@ -18,4 +18,3 @@ export const app = firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 export const db = app.firestore();
-

@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
@@ -8,10 +8,16 @@ const Header = () => {
   const { user } = useSelector((state) => ({ ...state }));
 
   let history = useHistory();
+  const dispatch = useDispatch();
   const logout = () => {
     auth.signOut();
     toast.success("Logout Successfully");
+    dispatch({
+      type: "USERS_LOGOUT",
+      payload: {},
+    });
     history.push("/");
+    window.location.reload();
   };
 
   return (
@@ -59,7 +65,11 @@ const Header = () => {
                             <ul className="megamenu-submenu">
                               <li>
                                 <a
-                                  href={`/template1/${user ? user.name : "1"}`}
+                                  href={`/template1/${
+                                    user && user.userid !== false
+                                      ? user.userid
+                                      : "1"
+                                  }`}
                                 >
                                   Portfolio 1
                                 </a>
@@ -77,16 +87,16 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link to="/" className="nav-link">
                     Contact
                   </Link>
-                </li>
+                </li> */}
 
                 {user ? (
                   <li className="nav-item">
                     <Link className="nav-link" to="/profilecomplete">
-                      Register
+                      Create Portfolio
                     </Link>
                   </li>
                 ) : (

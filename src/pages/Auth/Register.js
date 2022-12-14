@@ -13,6 +13,7 @@ function Register() {
   const [password, setpassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
   const { user } = useSelector((state) => ({ ...state }));
+  
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
@@ -35,7 +36,7 @@ function Register() {
       const user = res.user;
       const idTokenResult = await user.getIdTokenResult();
       var separatedString;
-
+      
       await db
         .collection("users")
         .doc(user.email)
