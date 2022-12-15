@@ -86,7 +86,15 @@ const Header = () => {
                                 </a>
                               </li>
                               <li>
-                                <a href="how-it-works.html">Portfolio 3</a>
+                                <a
+                                  href={`/template3/${
+                                    user && user.userid !== false
+                                      ? user.userid
+                                      : "1"
+                                  }`}
+                                >
+                                  Portfolio 3
+                                </a>
                               </li>
                             </ul>
                           </div>

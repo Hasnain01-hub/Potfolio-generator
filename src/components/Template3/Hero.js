@@ -8,12 +8,11 @@ const Hero = ({ data }) => {
           <div className="row">
             <div className="col-md-12 content align-left py-4 col-lg-5 ">
               <h1 className="mbr-section-title align-left mbr-bold pb-3 mbr-fonts-style display-2">
-                Pets Training School
+                {data.name}
               </h1>
               <p className="mbr-text pb-3 align-left mbr-fonts-style display-7">
                 {" "}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-                dui non diam eleifend egestas id a ligula.
+                {data.profession}
               </p>
               <div className="align-wrap align-left">
                 <div className="icons-wrap">
@@ -36,20 +35,6 @@ const Hero = ({ data }) => {
                     </h3>
                   </div>
                 </div>
-              </div>
-              <div className="align-left mbr-section-btn">
-                <a
-                  className="btn btn-md btn-primary display-4"
-                  href="https://mobirise.co/"
-                >
-                  VIEW MORE
-                </a>{" "}
-                <a
-                  className="btn btn-md btn-primary-outline display-4"
-                  href="https://mobirise.co/"
-                >
-                  BOOK NOW
-                </a>
               </div>
             </div>
             <div className="col-md-12 col-lg-7 img-col">

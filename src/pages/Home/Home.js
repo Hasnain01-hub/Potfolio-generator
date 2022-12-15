@@ -10,7 +10,7 @@ import FeatureSection from "../../components/Home/FeatureSection";
 import IntroSection from "../../components/Home/IntroSection";
 import CountSection from "../../components/Home/CountSection";
 import TestimonialSection from "../../components/Home/TestimonialSection";
-import PricingSection from "../../components/Home/PricingSection";
+
 import PartnersSection from "../../components/Home/PartnersSection";
 Aos.init();
 
@@ -26,7 +26,6 @@ const Home = () => {
         <IntroSection />
         <CountSection />
         <TestimonialSection />
-        <PricingSection />
         <PartnersSection />
       </div>
       <Footer />

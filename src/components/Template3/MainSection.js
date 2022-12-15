@@ -267,19 +267,14 @@ const MainSection = ({ data }) => {
             </div>
             <div className="col-md-12 content py-4 col-lg-6">
               <h1 className="mbr-section-title align-left mbr-bold pb-4 mbr-fonts-style display-2">
-                Teach Your Pet Any Active Games
+                ABOUT ME
               </h1>
               <h2 className="mbr-section-title align-left mbr-bold mbr-fonts-style display-7">
                 JUST A PHONE CALL AWAY
               </h2>
               <p className="mbr-text pb-3 align-left mbr-fonts-style display-7">
                 {" "}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                scelerisque est ex, in tempor leo suscipit ut. Etiam quis elit
-                sed dui dignissim posuere id sit amet ligula. Aenean semper
-                magna a sapien eleifend maximus. Aenean faucibus vehicula arcu,
-                non tristique risus vulputate et. Nullam lectus ligula, viverra
-                ut urna vitae, efficitur ultricies purus.
+                {data.aboutme}
               </p>
               <ul className="list">
                 <li className="item-wrap">
@@ -330,9 +325,9 @@ const MainSection = ({ data }) => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-8 pb-4">
-              <h4 className="align-left mbr-bold mbr-fonts-style display-7">
+              {/* <h4 className="align-left mbr-bold mbr-fonts-style display-7">
                 PET ACTIVITIES
-              </h4>
+              </h4> */}
               <h2 className="align-left mbr-bold mbr-fonts-style mbr-section-title display-2">
                 Take a closer look
               </h2>
@@ -341,7 +336,7 @@ const MainSection = ({ data }) => {
               <div className="align-left mbr-section-btn">
                 <a
                   className="btn btn-md btn-primary display-4"
-                  href="https://mobirise.co/"
+                  href={data.instagram}
                 >
                   VIEW ALL
                   <br />
@@ -350,39 +345,39 @@ const MainSection = ({ data }) => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src="/assets/temp3/assets/images/01.jpg" alt="" title />
+                <img src={data.images[0]["url"]} alt="" title />
                 <div className="wrapper">
                   <p className="mbr-text align-center mbr-semibold mbr-white mbr-fonts-style display-4">
-                    ACTIVITIES
+                    {data.name}
                   </p>
                   <h3 className="card-title align-center mbr-bold mbr-fonts-style align-left mbr-white display-5">
-                    <div>Toys Playtime</div>
+                    <div>{data.profession}</div>
                   </h3>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src="/assets/temp3/assets/images/02.jpg" alt="" title />
+                <img src={data.images[1]["url"]} alt="" title />
                 <div className="wrapper">
                   <p className="mbr-text align-center mbr-semibold mbr-white mbr-fonts-style display-4">
-                    ACTIVITIES
+                    {data.name}
                   </p>
                   <h3 className="card-title align-center mbr-bold mbr-fonts-style align-left mbr-white display-5">
-                    Active Rest
+                    {data.profession}
                   </h3>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src="/assets/temp3/assets/images/03.jpg" alt="" title />
+                <img src={data.images[2]["url"]} alt="" title />
                 <div className="wrapper">
                   <p className="mbr-text align-center mbr-semibold mbr-white mbr-fonts-style display-4">
-                    ACTIVITIES
+                    {data.name}
                   </p>
                   <h3 className="card-title align-center mbr-bold mbr-fonts-style align-left mbr-white display-5">
-                    Game Walks
+                    {data.profession}
                   </h3>
                 </div>
               </div>
@@ -411,13 +406,13 @@ const MainSection = ({ data }) => {
                   src="/assets/temp3/assets/images/bone.png"
                 />
                 <h3 className="mbr-white align-left mbr-bold mbr-fonts-style display-5">
-                  Book a Tour
+                  Marketing Requirements
                 </h3>
               </div>
             </div>
           </div>
           <div className="media-container-row">
-            <div className="card p-3 align-left">
+            {/* <div className="card p-3 align-left">
               <div className="wrap">
                 <div
                   className="pie_progress progress1"
@@ -430,32 +425,31 @@ const MainSection = ({ data }) => {
               <div className="content">
                 <div className="mbr-crt-title">
                   <h4 className="card-title align-center mbr-semibold pb-2 mbr-fonts-style display-7">
-                    FOOD SAFETY
+                  Product Sampling
                   </h4>
                 </div>
                 <div className="mbr-crt-text">
                   <p className="mbr-fonts-style align-center mbr-regular card-text display-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla metus metus, ornare dictum.
+                  
                     <br />
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="card p-3 align-left">
               <div className="wrap">
                 <div
                   className="pie_progress progress2"
                   role="progressbar"
-                  data-goal={60}
+                  data-goal={100}
                 >
-                  <span className="mbr-iconfont mbrib-idea" />
+                  <span className="mbr-iconfont mbri-calendar" />
                 </div>
               </div>
               <div className="content">
                 <div className="mbr-crt-title">
                   <h4 className="card-title align-center mbr-semibold pb-2 mbr-fonts-style display-7">
-                    ADJUSTED TEMPERATURE
+                    Online Events, Offline Events
                   </h4>
                 </div>
                 <div className="mbr-crt-text">
@@ -472,15 +466,15 @@ const MainSection = ({ data }) => {
                 <div
                   className="pie_progress progress3"
                   role="progressbar"
-                  data-goal={75}
+                  data-goal={100}
                 >
-                  <span className="mbr-iconfont mbrib-github" />
+                  <span className="mbr-iconfont mbri-shopping-basket" />
                 </div>
               </div>
               <div className="content">
                 <div className="mbr-crt-title">
                   <h4 className="card-title align-center mbr-semibold pb-2 mbr-fonts-style display-7">
-                    PET MEDICAL HISTORY
+                    Unboxing
                   </h4>
                 </div>
                 <div className="mbr-crt-text">
@@ -505,7 +499,7 @@ const MainSection = ({ data }) => {
               <div className="content">
                 <div className="mbr-crt-title">
                   <h4 className="card-title align-center mbr-semibold pb-2 mbr-fonts-style display-7">
-                    PLAY SPACE
+                    Reach & Frequency Campaign
                   </h4>
                 </div>
                 <div className="mbr-crt-text">
@@ -520,7 +514,7 @@ const MainSection = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="tabs cid-rGtBVIyxcv" id="pricing-tables1-3e">
+      {/* <section className="tabs cid-rGtBVIyxcv" id="pricing-tables1-3e">
         <div className="container d-flex flex-column">
           <div className="tab-content">
             <div id="tab1" className="tab-pane in active" role="tabpanel">
@@ -747,8 +741,8 @@ const MainSection = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="restaurant-menu2 restaurant-special-menu cid-rGtBUBLhjb"
         id="pricing-tables3-3d"
       >
@@ -919,8 +913,8 @@ const MainSection = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="progress-bars4 circle-progress-section cid-rGtHOr5vjy"
         id="progress-bars1-3z"
       >
@@ -1009,8 +1003,8 @@ const MainSection = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="features6 popup-btn-cards cid-rGtBycvgju"
         id="team1-35"
       >
@@ -1018,12 +1012,12 @@ const MainSection = ({ data }) => {
           <div className="row justify-content-center">
             <div className="col-lg-12 col-md-12 pb-5">
               <h2 className="align-center mbr-bold mbr-fonts-style mbr-section-title display-2">
-                Our Team
+                Social Links
               </h2>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src="/assets/temp3/assets/images/face1.png" alt="" title />
+                <img src={data.images[0]["url"]} alt="" title />
                 <div className="wrapper">
                   <h3 className="card-title align-center mbr-bold mbr-fonts-style align-left display-5">
                     Emilia Johnson
@@ -1089,8 +1083,8 @@ const MainSection = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="cid-rGtBzsRxzP" id="team3-37">
+      </section> */}
+      {/* <section className="cid-rGtBzsRxzP" id="team3-37">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12 content py-4 col-lg-5 ">
@@ -1153,7 +1147,7 @@ const MainSection = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="cid-rGtByMu6AK" id="team4-36">
         <div className="container-fluid">
           <div className="row">
@@ -1166,16 +1160,13 @@ const MainSection = ({ data }) => {
               <h1 className="mbr-section-title align-left mbr-bold pb-2 mbr-fonts-style display-2">
                 <strong>
                   <a href="#">
-                    <b>Robert</b>
+                    <b>{data.name.split(" ")[0]}</b>
                   </a>{" "}
                 </strong>
-                Sallivan
+                {data.name.split(" ")[1]}
               </h1>
               <p className="align-left mbr-regular pb-3 mbr-fonts-style display-7">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
-                feugiat neque. Nulla gravida sodales enim at interdum.
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas.
+                {data.achievenemt}
               </p>
               <div className="icons-wrap row">
                 <div className="icon-wrap align-left col-md-4">
@@ -1219,7 +1210,7 @@ const MainSection = ({ data }) => {
           </div>
         </div>
       </section>
-      <section
+      {/* <section
         className="carouse1 slide testimonials-slider cid-rGtBR1utsO"
         data-interval="false"
         id="testimonials-slider1-3c"
@@ -1333,7 +1324,7 @@ const MainSection = ({ data }) => {
             </ol>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
