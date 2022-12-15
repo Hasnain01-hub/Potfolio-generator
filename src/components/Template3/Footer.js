@@ -33,7 +33,7 @@ const Footer = ({ data }) => {
             </div>
             <div className="card col-12 col-md-6 col-lg-5 card-col m-auto">
               <div className="card-head">
-                <img src="/assets/temp3/assets/images/03.jpg" alt="" title />
+                <img src={data.images[0]["url"]} alt="" title />
               </div>
               <div className="card-wrapper">
                 <div className="item">

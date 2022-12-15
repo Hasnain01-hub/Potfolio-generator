@@ -59,10 +59,7 @@ const NavBar = ({ data }) => {
         <div className="container">
           <div className="navbar-brand">
             <span className="navbar-caption-wrap">
-              <a
-                className="navbar-caption text-black display-5"
-                href="https://mobiri.se/"
-              >
+              <a className="navbar-caption text-black display-5" href="#">
                 {data.name}
               </a>
             </span>
@@ -88,17 +85,23 @@ const NavBar = ({ data }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav nav-dropdown" data-app-modern-menu="true">
               <li className="nav-item">
+                <a className="nav-link link text-black display-4" href="#hero">
+                  Home
+                </a>
+              </li>
+
+              <li className="nav-item">
                 <a
                   className="nav-link link text-black display-4"
-                  href="https://mobiri.se/"
+                  href="#features06-4"
                 >
-                  Home
+                  Features
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className="nav-link link text-black display-4"
-                  href="https://mobiri.se/"
+                  href="#header02-d"
                   aria-expanded="false"
                 >
                   About
@@ -107,37 +110,20 @@ const NavBar = ({ data }) => {
               <li className="nav-item">
                 <a
                   className="nav-link link text-black display-4"
-                  href="https://mobiri.se/"
+                  href="#clients02-6"
                 >
-                  Features
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link link text-black display-4"
-                  href="https://mobiri.se/"
-                >
-                  Help
+                  Contact
                 </a>
               </li>
             </ul>
             <div className="navbar-buttons mbr-section-btn">
               <a
-                className="btn btn-lg btn-white display-4"
-                href="https://mobiri.se/"
-              >
-                <div className="btn-overlay" />
-                <div className="btn-transform">
-                  <div className="btn-transform-1">Log in&nbsp;</div>
-                </div>
-              </a>{" "}
-              <a
                 className="btn btn-lg btn-black display-4"
-                href="https://mobiri.se/"
+                href={data.instagram}
               >
                 <div className="btn-overlay" />
                 <div className="btn-transform">
-                  <div className="btn-transform-1">Get Started</div>
+                  <div className="btn-transform-1">Connect</div>
                 </div>
               </a>
             </div>

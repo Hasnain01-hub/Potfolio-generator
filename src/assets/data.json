@@ -3,7 +3,17 @@
     "name": "John Doe",
     "profession": "I specialize in fashion, advertorial, black &amp; white photography",
     "email": "demo@example.com",
-    "achievenemt": "“Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh  ultricies vehicula ut id elit. Cum sociis natoque penatibus.”",
+    "achievenemt": [
+      {
+        "data": "“Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh  ultricies vehicula ut id elit. Cum sociis natoque penatibus.”"
+      },
+      {
+        "data": "“Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh  ultricies vehicula ut id elit. Cum sociis natoque penatibus.”"
+      },
+      {
+        "data": "“Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh  ultricies vehicula ut id elit. Cum sociis natoque penatibus.”"
+      }
+    ],
     "images": [
       {
         "url": "/assets/images/art/about8.jpg"

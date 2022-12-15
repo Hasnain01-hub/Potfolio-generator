@@ -266,11 +266,16 @@ const MainSection = ({ data }) => {
               </div>
             </div>
             <div className="col-md-12 content py-4 col-lg-6">
-              <h1 className="mbr-section-title align-left mbr-bold pb-4 mbr-fonts-style display-2">
-                ABOUT ME
+              <h1 className="mbr-section-title align-left mbr-bold pb-2 mbr-fonts-style display-2">
+                <strong>
+                  <a href="/#">
+                    <b>{data.name.split(" ")[0]}</b>
+                  </a>{" "}
+                </strong>
+                {data.name.split(" ")[1]}
               </h1>
               <h2 className="mbr-section-title align-left mbr-bold mbr-fonts-style display-7">
-                JUST A PHONE CALL AWAY
+                About Me
               </h2>
               <p className="mbr-text pb-3 align-left mbr-fonts-style display-7">
                 {" "}
@@ -1170,55 +1175,17 @@ const MainSection = ({ data }) => {
               </div>
             </div>
             <div className="col-md-12 content py-4 col-lg-5 ">
-              <h1 className="mbr-section-title align-left mbr-bold pb-2 mbr-fonts-style display-2">
-                <strong>
-                  <a href="/#">
-                    <b>{data.name.split(" ")[0]}</b>
-                  </a>{" "}
-                </strong>
-                {data.name.split(" ")[1]}
-              </h1>
-              <p className="align-left mbr-regular pb-3 mbr-fonts-style display-7">
-                {data.achievenemt}
-              </p>
-              <div className="icons-wrap row">
-                <div className="icon-wrap align-left col-md-4">
-                  <span className="mbr-iconfont mbrib-globe" />
-                  <div className="text-wrap">
-                    <h3 className="icon-title align-left mbr-bold mbr-fonts-style display-7">
-                      DOG CARE
-                    </h3>
-                    <p className="mbr-text mbr-regular align-left mbr-fonts-style display-4">
-                      {" "}
-                      Lorem ipsum dolor amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="icon-wrap align-left col-md-4">
-                  <span className="mbr-iconfont mbrib-alert" />
-                  <div className="text-wrap">
-                    <h3 className="icon-title align-left mbr-bold mbr-fonts-style display-7">
-                      TRAINING
-                    </h3>
-                    <p className="mbr-text mbr-regular align-left mbr-fonts-style display-4">
-                      {" "}
-                      Lorem ipsum dolor amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="icon-wrap align-left col-md-4">
-                  <span className="mbr-iconfont mbrib-hearth" />
-                  <div className="text-wrap">
-                    <h3 className="icon-title align-left mbr-bold mbr-fonts-style display-7">
-                      FIRST AID
-                    </h3>
-                    <p className="mbr-text mbr-regular align-left mbr-fonts-style display-4">
-                      {" "}
-                      Lorem ipsum dolor amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h2 className="mbr-section-title align-left mbr-bold mbr-fonts-style display-7">
+                Achievements
+              </h2>
+              {data.achievenemt.map((val, index) => {
+                return (
+                  <p className="align-left mbr-regular pb-3 mbr-fonts-style display-7">
+                    {index + 1}.&nbsp;
+                    {val.data}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -18,32 +18,28 @@ const MainSection = ({ data }) => {
             <div className="col-sm-6 col-md-12 col-lg-4">
               <div className="card-wrap card1">
                 <div className="image-wrap">
-                  <img
-                    src="/assets/temp2/assets/images/features1.jpg"
-                    alt="Mobirise Website Builder"
-                  />
+                  <img src={data.images[0]["url"]} alt={data.name} />
                 </div>
                 <div className="content-wrap">
                   <h5 className="mbr-section-title card-title mbr-fonts-style align-left m-0 display-5">
                     <strong>Creation</strong>
                   </h5>
-                  <p className="card-text mbr-fonts-style align-left display-7">
-                    Lorem ipsum dolor sit amet nulla vel, consectetur
-                    adipiscing. Donec massa nulla gravida pulvinar.
-                  </p>
+                  {/* <p className="card-text mbr-fonts-style align-left display-7">
+                    {data.aboutme}
+                  </p> */}
                   <div className="social-row display-7">
                     <div className="soc-item">
+                      <span className="tag mbr-fonts-style display-4">art</span>
+                    </div>
+                    <div className="soc-item">
                       <span className="tag mbr-fonts-style display-4">
-                        Free
+                        creator
                       </span>
                     </div>
                     <div className="soc-item">
                       <span className="tag mbr-fonts-style display-4">
-                        Basic
+                        Photography
                       </span>
-                    </div>
-                    <div className="soc-item">
-                      <span className="tag mbr-fonts-style display-4">Pro</span>
                     </div>
                   </div>
                 </div>
@@ -53,7 +49,7 @@ const MainSection = ({ data }) => {
               <div className="card-wrap card2">
                 <div className="image-wrap">
                   <img
-                    src="/assets/temp2/assets/images/features2.jpg"
+                    src={data.images[1]["url"]}
                     alt="Mobirise Website Builder"
                   />
                 </div>
@@ -61,24 +57,22 @@ const MainSection = ({ data }) => {
                   <h5 className="mbr-section-title card-title2 mbr-fonts-style align-left m-0 display-5">
                     <strong>Branding</strong>
                   </h5>
-                  <p className="card-text2 mbr-fonts-style align-left display-7">
+                  {/* <p className="card-text2 mbr-fonts-style align-left display-7">
                     Lorem ipsum dolor sit amet nulla vel, consectetur
                     adipiscing. Donec massa nulla gravida pulvinar.
-                  </p>
+                  </p> */}
                   <div className="social-row display-7">
-                    <div className="soc-item soc-item2">
-                      <span className="tag2 mbr-fonts-style display-4">
-                        Free
+                    <div className="soc-item">
+                      <span className="tag mbr-fonts-style display-4">art</span>
+                    </div>
+                    <div className="soc-item">
+                      <span className="tag mbr-fonts-style display-4">
+                        creator
                       </span>
                     </div>
-                    <div className="soc-item soc-item2">
-                      <span className="tag2 mbr-fonts-style display-4">
-                        Basic
-                      </span>
-                    </div>
-                    <div className="soc-item soc-item2">
-                      <span className="tag2 mbr-fonts-style display-4">
-                        Pro
+                    <div className="soc-item">
+                      <span className="tag mbr-fonts-style display-4">
+                        Photography
                       </span>
                     </div>
                   </div>
@@ -89,7 +83,7 @@ const MainSection = ({ data }) => {
               <div className="card-wrap card3">
                 <div className="image-wrap">
                   <img
-                    src="/assets/temp2/assets/images/features3.jpg"
+                    src={data.images[2]["url"]}
                     alt="Mobirise Website Builder"
                   />
                 </div>
@@ -97,24 +91,24 @@ const MainSection = ({ data }) => {
                   <h5 className="mbr-section-title card-title3 mbr-fonts-style align-left m-0 display-5">
                     <strong>Promotion</strong>
                   </h5>
-                  <p className="card-text3 mbr-fonts-style align-left display-7">
+                  {/* <p className="card-text3 mbr-fonts-style align-left display-7">
                     Lorem ipsum dolor sit amet nulla vel, consectetur
                     adipiscing. Donec massa nulla gravida pulvinar.
-                  </p>
+                  </p> */}
                   <div className="social-row display-7">
                     <div className="soc-item soc-item3">
                       <span className="tag3 mbr-fonts-style display-4">
-                        Free
+                        art
                       </span>
                     </div>
                     <div className="soc-item soc-item3">
                       <span className="tag3 mbr-fonts-style display-4">
-                        Basic
+                        creator
                       </span>
                     </div>
                     <div className="soc-item soc-item3">
                       <span className="tag3 mbr-fonts-style display-4">
-                        Pro
+                        Photography
                       </span>
                     </div>
                   </div>
@@ -124,81 +118,7 @@ const MainSection = ({ data }) => {
           </div>
         </div>
       </section>
-      <section
-        data-bs-version="5.1"
-        className="header5 cid-tdxNYI8cif"
-        id="header05-3"
-      >
-        <div className="container">
-          <div className="row content-wrapper justify-content-center">
-            <div className="col-lg-7 mbr-form">
-              <div className="col-lg-12 col-md-12 col-sm-12">
-                <h1 className="mbr-section-title mbr-fonts-style mb-5 display-1">
-                  <strong>Become an influencer and promote yourself</strong>
-                </h1>
-              </div>
-              <div className="text-wrapper align-left" data-form-type="formoid">
-                {/*Formbuilder Form*/}
-                <form
-                  action="https://mobirise.eu/"
-                  method="POST"
-                  className="mbr-form form-with-styler"
-                  data-form-title="Form Name"
-                >
-                  <input
-                    type="hidden"
-                    name="email"
-                    data-form-email="true"
-                    defaultValue="mzWu9QxSMwi5Yd9daZXshwSYh9KGyAN/KkvDTqJQPaaCqnDOp5Mx95u6TBuZ/HR45VyKuF/PynmPEBqe7pX7hCXwEQOmQcdwT2eVbLdzR0ex4T6az1M2pSkpBoFojU30.d/EUhdEV76jqoBbPljfVwejCkSh6FtC9RJt2XLTVxqPY1ysqnqkZgBvnO2wz2UCmhV+svEVaRXsQ+HZMpa32TXUHlQgKkEFtB0914nmheMroCB14ridl00LnQyDM7XbA"
-                  />
-                  <div className="row">
-                    <div
-                      hidden="hidden"
-                      data-form-alert
-                      className="alert alert-success col-12"
-                    >
-                      Thanks for filling out the form!
-                    </div>
-                    <div
-                      hidden="hidden"
-                      data-form-alert-danger
-                      className="alert alert-danger col-12"
-                    >
-                      {" "}
-                      Oops...! some problem!{" "}
-                    </div>
-                  </div>
-                  <div className="dragArea row">
-                    <div
-                      data-for="email"
-                      className="col-lg-6 col-md-6 col-sm-12 form-group"
-                    >
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="test@email.com"
-                        data-form-field="email"
-                        className="form-control display-7"
-                        defaultValue
-                        id="email-header05-3"
-                      />
-                    </div>
-                    <div className="col-auto mbr-section-btn">
-                      <button
-                        type="submit"
-                        className="w-100 w-100 w-100 w-100 w-100 w-100 btn btn-success display-4"
-                      >
-                        Get Started
-                      </button>
-                    </div>
-                  </div>
-                </form>
-                {/*Formbuilder Form*/}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <section
         data-bs-version="5.1"
         className="features4 cid-tdxO14723f"
@@ -274,29 +194,26 @@ const MainSection = ({ data }) => {
             <div className="col-12 col-md-12 col-lg-5 image-wrapper">
               <img
                 className="w-100"
-                src="/assets/temp2/assets/images/features1.jpg"
+                src={data.images[2]["url"]}
                 alt="Mobirise Website Builder"
               />
             </div>
             <div className="col-12 col-md-12 col-lg">
               <div className="text-wrapper align-left">
                 <h1 className="mbr-section-title mbr-fonts-style mb-4 display-2">
-                  <strong>Promote your brands on social media</strong>
+                  <strong>About Me</strong>
                 </h1>
                 <p className="mbr-text align-left mbr-fonts-style display-7">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  egestas massa vel nulla gravida pulvinar. Pellentesque
-                  habitant morbi tristique senectus et netus et malesuada fames
-                  ac turpis egestas.
+                  {data.aboutme}
                 </p>
-                <div className="mbr-section-btn align-left mt-3">
+                {/* <div className="mbr-section-btn align-left mt-3">
                   <a
                     className="btn btn-lg btn-primary display-4"
                     href="https://mobiri.se/"
                   >
                     Get Started
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -310,51 +227,43 @@ const MainSection = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-5 mb-5 align-left">
-              <h3 className="mbr-section-maintitle mbr-fonts-style mt-3 display-1">
-                <strong>Our Team</strong>
-              </h3>
+              <h5 className="mbr-section-maintitle mbr-fonts-style mt-3 display-1">
+                <strong>Achievement</strong>
+              </h5>
               <p className="mbr-section-maintext mbr-fonts-style mt-3 display-7">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent vitae pellentesque. Integer aliquam.
                 <br />
               </p>
-              <div className="mbr-section-btn btn-section align-left">
-                <a
-                  className="btn btn-lg article-btn btn-primary display-4"
-                  href="https://mobiri.se/"
-                >
-                  <strong>Read more</strong>
-                </a>
-              </div>
             </div>
             <div className="col-lg-7">
-              <div className="row item-row">
-                <div className="col-lg-7">
-                  <div className="article-wrapper align-left">
-                    <h3 className="mbr-section-title mbr-fonts-style mt-3 display-5">
-                      <strong>Designer</strong>
-                    </h3>
-                    <h4 className="mbr-section-subtitle mbr-fonts-style mt-1 display-7">
-                      Lorem ipsum dolor sit amet consectetur.
-                    </h4>
-                    <p className="mbr-section-text mbr-fonts-style mt-3 display-7">
-                      Full-time
-                      <br />
-                    </p>
+              {data.achievenemt.map((card, index) => {
+                return (
+                  <div className="row item-row">
+                    <div className="col-lg-7">
+                      <div className="article-wrapper align-left">
+                        <h3 className="mbr-section-title mbr-fonts-style mt-3 display-5">
+                          <strong>{index + 1}.</strong>
+                        </h3>
+                        <h4 className="mbr-section-subtitle mbr-fonts-style mt-1 display-7">
+                          {card.data}
+                        </h4>
+                      </div>
+                    </div>
+                    <div className="col-lg-5">
+                      <div className="mbr-section-btn align-right">
+                        <a
+                          className="btn btn-lg article-btn btn-secondary display-4"
+                          href={data.instagram}
+                        >
+                          <strong>know more</strong>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-5">
-                  <div className="mbr-section-btn align-right">
-                    <a
-                      className="btn btn-lg article-btn btn-secondary display-4"
-                      href="https://mobiri.se/"
-                    >
-                      <strong>Read more</strong>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="row item-row">
+                );
+              })}
+              {/* <div className="row item-row">
                 <div className="col-lg-7">
                   <div className="article-wrapper align-left">
                     <h3 className="mbr-section-title mbr-fonts-style mt-3 display-5">
@@ -405,394 +314,12 @@ const MainSection = ({ data }) => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
-      <section
-        data-bs-version="5.1"
-        className="video1 cid-tdxOEKI0B5"
-        id="video01-e"
-      >
-        <div className="align-center container">
-          <div className="mbr-section-head">
-            <h4 className="mbr-section-title mbr-fonts-style mb-0 display-1">
-              <strong>Watch Video</strong>
-            </h4>
-          </div>
-          <div className="row justify-content-center mt-4">
-            <div className="col-12 col-lg-12">
-              <div className="box">
-                <div
-                  className="mbr-media show-modal align-center"
-                  data-modal=".modalWindow"
-                >
-                  <img
-                    src="/assets/temp2/assets/images/background1.jpg"
-                    alt="Mobirise"
-                  />
-                  <div className="icon-wrap">
-                    <a className="text-primary" href="/#">
-                      <span className="mbr-iconfont socicon-youtube socicon" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="modalWindow" style={{ display: "none" }}>
-            <div className="modalWindow-container">
-              <div className="modalWindow-video-container">
-                <div className="modalWindow-video">
-                  <iframe
-                    title="Frame"
-                    width="100%"
-                    height="100%"
-                    frameBorder={0}
-                    allowFullScreen={1}
-                    data-src="https://www.youtube.com/watch?v=VA8PzkQa8d8"
-                  />
-                </div>
-                <a
-                  className="close"
-                  role="button"
-                  data-dismiss="modal"
-                  data-bs-dismiss="modal"
-                  href="/#"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mbr-iconfont mobi-mbri-close mobi-mbri closeModal"
-                  />
-                  <span className="sr-only visually-hidden">Close</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        data-bs-version="5.1"
-        className="social2 cid-tdxO4rQvS6"
-        id="social02-8"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <h2 className="title mbr-fonts-style align-left mb-5 display-5">
-                <strong>Share Your Content</strong>
-              </h2>
-            </div>
-            <div className="card col-12 col-md-6 col-lg-6">
-              <div className="item-img">
-                <img
-                  src="assets/images/features1.jpg"
-                  alt="Mobirise Website Builder"
-                />
-              </div>
-              <div className="card-wrapper">
-                <span className="mbr-iconfont m-auto socicon-instagram socicon" />
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mb-0 display-7">
-                    <strong>Instagram</strong>
-                  </h4>
-                  <h5 className="card-text mbr-fonts-style display-4">
-                    Lorem ipsum dolor sit amet.
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div className="card col-12 col-md-6 col-lg-6">
-              <div className="item-img">
-                <img
-                  src="/assets/temp2/assets/images/features4.jpg"
-                  alt="Mobirise Website Builder"
-                />
-              </div>
-              <div className="card-wrapper">
-                <span className="mbr-iconfont m-auto socicon-tiktok socicon" />
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mb-0 display-7">
-                    <strong>TikTok</strong>
-                  </h4>
-                  <h5 className="card-text mbr-fonts-style display-4">
-                    Lorem ipsum dolor sit amet.
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        data-bs-version="5.1"
-        className="list1 cid-tdxOTZpHwi"
-        id="list01-f"
-      >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 col-md-12 col-lg-10 m-auto">
-              <div className="content">
-                <div className="mbr-section-head align-left mb-5">
-                  <h3 className="mbr-section-title mb-2 mbr-fonts-style display-2">
-                    <strong>FAQ</strong>
-                  </h3>
-                </div>
-                <div
-                  id="bootstrap-accordion_9"
-                  className="panel-group accordionStyles accordion"
-                  role="tablist"
-                  aria-multiselectable="true"
-                >
-                  <div className="card mb-3">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <a
-                        role="button"
-                        className="panel-title collapsed"
-                        data-toggle="collapse"
-                        data-bs-toggle="collapse"
-                        data-core
-                        href="#collapse1_9"
-                        aria-expanded="false"
-                        aria-controls="collapse1"
-                      >
-                        <h6 className="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                          Lorem ipsum dolor sit amet?
-                        </h6>
-                        <span className="sign mbr-iconfont mobi-mbri-arrow-down" />
-                      </a>
-                    </div>
-                    <div
-                      id="collapse1_9"
-                      className="panel-collapse noScroll collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                      data-bs-parent="#bootstrap-accordion_9"
-                    >
-                      <div className="panel-body">
-                        <p className="mbr-fonts-style panel-text display-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Fusce vestibulum laoreet tincidunt. Proin et
-                          sapien scelerisque, ornare lectus eget, iaculis
-                          lectus. Pellentesque viverra molestie tortor. Nunc sed
-                          interdum est, in maximus diam. Donec eu tellus dictum,
-                          gravida velit et, sagittis arcu. Proin et lectus
-                          dapibus. Cras fringilla elit velit placerat tortor
-                          mollis cursus.{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card mb-3">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <a
-                        role="button"
-                        className="panel-title collapsed"
-                        data-toggle="collapse"
-                        data-bs-toggle="collapse"
-                        data-core
-                        href="#collapse2_9"
-                        aria-expanded="false"
-                        aria-controls="collapse2"
-                      >
-                        <h6 className="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                          Pellentesque nec purus ut massa?
-                        </h6>
-                        <span className="sign mbr-iconfont mobi-mbri-arrow-down" />
-                      </a>
-                    </div>
-                    <div
-                      id="collapse2_9"
-                      className="panel-collapse noScroll collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                      data-bs-parent="#bootstrap-accordion_9"
-                    >
-                      <div className="panel-body">
-                        <p className="mbr-fonts-style panel-text display-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Fusce vestibulum laoreet tincidunt. Proin et
-                          sapien scelerisque, ornare lectus eget, iaculis
-                          lectus. Pellentesque viverra molestie tortor. Nunc sed
-                          interdum est, in maximus diam. Donec eu tellus dictum,
-                          gravida velit et, sagittis arcu. Proin et lectus
-                          dapibus. Cras fringilla elit velit placerat tortor
-                          mollis cursus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card mb-3">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <a
-                        role="button"
-                        className="panel-title collapsed"
-                        data-toggle="collapse"
-                        data-bs-toggle="collapse"
-                        data-core
-                        href="#collapse3_9"
-                        aria-expanded="false"
-                        aria-controls="collapse3"
-                      >
-                        <h6 className="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                          Mauris porttitor tempor orci vitae?
-                        </h6>
-                        <span className="sign mbr-iconfont mobi-mbri-arrow-down" />
-                      </a>
-                    </div>
-                    <div
-                      id="collapse3_9"
-                      className="panel-collapse noScroll collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                      data-bs-parent="#bootstrap-accordion_9"
-                    >
-                      <div className="panel-body">
-                        <p className="mbr-fonts-style panel-text display-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Fusce vestibulum laoreet tincidunt. Proin et
-                          sapien scelerisque, ornare lectus eget, iaculis
-                          lectus. Pellentesque viverra molestie tortor. Nunc sed
-                          interdum est, in maximus diam. Donec eu tellus dictum,
-                          gravida velit et, sagittis arcu. Proin et lectus
-                          dapibus. Cras fringilla elit velit placerat tortor
-                          mollis cursus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card mb-3">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <a
-                        role="button"
-                        className="panel-title collapsed"
-                        data-toggle="collapse"
-                        data-bs-toggle="collapse"
-                        data-core
-                        href="#collapse4_9"
-                        aria-expanded="false"
-                        aria-controls="collapse4"
-                      >
-                        <h6 className="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                          Ut ultricies imperdiet volutpat?
-                        </h6>
-                        <span className="sign mbr-iconfont mobi-mbri-arrow-down" />
-                      </a>
-                    </div>
-                    <div
-                      id="collapse4_9"
-                      className="panel-collapse noScroll collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                      data-bs-parent="#bootstrap-accordion_9"
-                    >
-                      <div className="panel-body">
-                        <p className="mbr-fonts-style panel-text display-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Fusce vestibulum laoreet tincidunt. Proin et
-                          sapien scelerisque, ornare lectus eget, iaculis
-                          lectus. Pellentesque viverra molestie tortor. Nunc sed
-                          interdum est, in maximus diam. Donec eu tellus dictum,
-                          gravida velit et, sagittis arcu. Proin et lectus
-                          dapibus. Cras fringilla elit velit placerat tortor
-                          mollis cursus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card mb-3">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <a
-                        role="button"
-                        className="panel-title collapsed"
-                        data-toggle="collapse"
-                        data-bs-toggle="collapse"
-                        data-core
-                        href="#collapse5_9"
-                        aria-expanded="false"
-                        aria-controls="collapse5"
-                      >
-                        <h6 className="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                          Mauris dui elit porta quis justo?
-                        </h6>
-                        <span className="sign mbr-iconfont mobi-mbri-arrow-down" />
-                      </a>
-                    </div>
-                    <div
-                      id="collapse5_9"
-                      className="panel-collapse noScroll collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                      data-bs-parent="#bootstrap-accordion_9"
-                    >
-                      <div className="panel-body">
-                        <p className="mbr-fonts-style panel-text display-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Fusce vestibulum laoreet tincidunt. Proin et
-                          sapien scelerisque, ornare lectus eget, iaculis
-                          lectus. Pellentesque viverra molestie tortor. Nunc sed
-                          interdum est, in maximus diam. Donec eu tellus dictum,
-                          gravida velit et, sagittis arcu. Proin et lectus
-                          dapibus. Cras fringilla elit velit placerat tortor
-                          mollis cursus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card mb-3">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <a
-                        role="button"
-                        className="panel-title collapsed"
-                        data-toggle="collapse"
-                        data-bs-toggle="collapse"
-                        data-core
-                        href="#collapse6_9"
-                        aria-expanded="false"
-                        aria-controls="collapse6"
-                      >
-                        <h6 className="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                          Nulla laoreet urna purus sed ultricies?
-                        </h6>
-                        <span className="sign mbr-iconfont mobi-mbri-arrow-down" />
-                      </a>
-                    </div>
-                    <div
-                      id="collapse6_9"
-                      className="panel-collapse noScroll collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                      data-bs-parent="#bootstrap-accordion_9"
-                    >
-                      <div className="panel-body">
-                        <p className="mbr-fonts-style panel-text display-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Fusce vestibulum laoreet tincidunt. Proin et
-                          sapien scelerisque, ornare lectus eget, iaculis
-                          lectus. Pellentesque viverra molestie tortor. Nunc sed
-                          interdum est, in maximus diam. Donec eu tellus dictum,
-                          gravida velit et, sagittis arcu. Proin et lectus
-                          dapibus. Cras fringilla elit velit placerat tortor
-                          mollis cursus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <section
         data-bs-version="5.1"
         className="clients2 cid-tdxO2EAyjQ"
@@ -802,64 +329,82 @@ const MainSection = ({ data }) => {
           <div className="row justify-content-center">
             <div className="col-12">
               <h3 className="mbr-section-title mbr-fonts-style align-center mb-5 display-2">
-                <strong>Our Clients</strong>
+                <strong>Find Social Links</strong>
               </h3>
             </div>
             <div className="col-sm-6 card col-lg-3">
-              <div className="card-wrap card1">
+              <div
+                className="card-wrap card1"
+                style={{
+                  backgroundImage: "url(" + `${data.images[0]["url"]}` + ")",
+                }}
+              >
                 <div className="content-wrap">
                   <div className="mbr-section-btn card-btn align-center">
                     <a
                       className="btn btn-white display-4"
-                      href="https://mobiri.se/"
+                      href={data.instagram}
                     >
-                      <span className="socicon socicon-instagram mbr-iconfont mbr-iconfont-btn" />
-                      /profilelink
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+                      </svg>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 card col-lg-3">
-              <div className="card-wrap card2">
+              <div
+                className="card-wrap card2"
+                style={{
+                  backgroundImage: "url(" + `${data.images[1]["url"]}` + ")",
+                }}
+              >
                 <div className="content-wrap">
                   <div className="mbr-section-btn card-btn align-center">
-                    <a
-                      className="btn btn-white display-4"
-                      href="https://mobiri.se/"
-                    >
-                      <span className="socicon socicon-instagram mbr-iconfont mbr-iconfont-btn" />
-                      /profilelink
+                    <a className="btn btn-white display-4" href={data.youtube}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z" />
+                      </svg>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 card col-lg-3">
-              <div className="card-wrap card3">
+              <div
+                className="card-wrap card3"
+                style={{
+                  backgroundImage: "url(" + `${data.images[2]["url"]}` + ")",
+                }}
+              >
                 <div className="content-wrap">
                   <div className="mbr-section-btn card-btn align-center">
                     <a
                       className="btn btn-white display-4"
-                      href="https://mobiri.se/"
+                      href={`mailto:${data.email}`}
                     >
-                      <span className="socicon socicon-instagram mbr-iconfont mbr-iconfont-btn" />
-                      /profilelink
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 card col-lg-3">
-              <div className="card-wrap card4">
-                <div className="content-wrap">
-                  <div className="mbr-section-btn card-btn align-center">
-                    <a
-                      className="btn btn-white display-4"
-                      href="https://mobiri.se/"
-                    >
-                      <span className="socicon socicon-instagram mbr-iconfont mbr-iconfont-btn" />
-                      /profilelink
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M18.803 8.493A5.023 5.023 0 0 0 22 8.9V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h13.1c-.066.323-.1.658-.1 1a4.98 4.98 0 0 0 1.193 3.241l-5.132 4.442-6.414-5.445-1.294 1.524 7.72 6.555 6.73-5.824zM21 7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                      </svg>
                     </a>
                   </div>
                 </div>
@@ -868,47 +413,7 @@ const MainSection = ({ data }) => {
           </div>
         </div>
       </section>
-      <section
-        data-bs-version="5.1"
-        className="article1 cid-tdxOi0lqX2"
-        id="article01-c"
-      >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="card col-md-12 col-lg-12">
-              <div className="card-wrapper">
-                <div className="card-box align-left">
-                  <h4 className="card-title mbr-fonts-style mbr-white mb-0 display-1">
-                    <strong>{data.name}</strong>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        data-bs-version="5.1"
-        className="map1 cid-tdxO8gzjmg"
-        id="map01-b"
-      >
-        <div className="container">
-          <div className="mbr-section-head mb-4">
-            <h3 className="mbr-section-title mbr-fonts-style align-center mb-0 display-1">
-              <strong>Our office</strong>
-            </h3>
-          </div>
-          <div className="google-map">
-            <iframe
-              title="Frame"
-              frameBorder={0}
-              style={{ border: 0 }}
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk89J4FSunMF33ruMVWJaJht_Ro0kvoXs&q=350%205th%20Ave,%20New%20York,%20NY%2010118"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
+
       <section
         data-bs-version="5.1"
         className="footer2 cid-tdxO6UlGHf"
@@ -918,19 +423,88 @@ const MainSection = ({ data }) => {
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8">
               <div className="image-wrapper d-flex justify-content-center">
-                <img
-                  src="/assets/temp2/assets/images/uk.jpg"
-                  alt="Mobirise Website Builder"
-                />
-                <img
-                  src="/assets/temp2/assets/images/us.jpg"
-                  alt="Mobirise Website Builder"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  width="40"
+                  zoomAndPan="magnify"
+                  viewBox="0 0 30 30.000001"
+                  height="40"
+                  preserveAspectRatio="xMidYMid meet"
+                  version="1.0"
+                >
+                  <defs>
+                    <clipPath id="id1">
+                      <path
+                        d="M 2.371094 18 L 27.773438 18 L 27.773438 23.921875 L 2.371094 23.921875 Z M 2.371094 18 "
+                        clip-rule="nonzero"
+                      />
+                    </clipPath>
+                    <clipPath id="id2">
+                      <path
+                        d="M 2.371094 10 L 27.773438 10 L 27.773438 19 L 2.371094 19 Z M 2.371094 10 "
+                        clip-rule="nonzero"
+                      />
+                    </clipPath>
+                    <clipPath id="id3">
+                      <path
+                        d="M 2.371094 5.050781 L 27.773438 5.050781 L 27.773438 11 L 2.371094 11 Z M 2.371094 5.050781 "
+                        clip-rule="nonzero"
+                      />
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#id1)">
+                    <path
+                      fill="rgb(7.449341%, 53.329468%, 3.138733%)"
+                      d="M 2.375 21.019531 C 2.375 22.625 3.640625 23.921875 5.199219 23.921875 L 24.945312 23.921875 C 26.503906 23.921875 27.769531 22.625 27.769531 21.019531 L 27.769531 18.117188 L 2.375 18.117188 Z M 2.375 21.019531 "
+                      fill-opacity="1"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                  <g clip-path="url(#id2)">
+                    <path
+                      fill="rgb(93.328857%, 93.328857%, 93.328857%)"
+                      d="M 2.375 10.859375 L 27.769531 10.859375 L 27.769531 18.117188 L 2.375 18.117188 Z M 2.375 10.859375 "
+                      fill-opacity="1"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                  <g clip-path="url(#id3)">
+                    <path
+                      fill="rgb(100%, 59.999084%, 19.999695%)"
+                      d="M 27.769531 10.859375 L 27.769531 7.957031 C 27.769531 6.351562 26.503906 5.050781 24.945312 5.050781 L 5.199219 5.050781 C 3.640625 5.050781 2.375 6.351562 2.375 7.957031 L 2.375 10.859375 Z M 27.769531 10.859375 "
+                      fill-opacity="1"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                  <path
+                    fill="rgb(0%, 0%, 50.19989%)"
+                    d="M 17.894531 14.488281 C 17.894531 14.871094 17.820312 15.242188 17.679688 15.597656 C 17.535156 15.953125 17.332031 16.269531 17.066406 16.539062 C 16.804688 16.8125 16.496094 17.023438 16.152344 17.167969 C 15.804688 17.316406 15.445312 17.390625 15.074219 17.390625 C 14.699219 17.390625 14.339844 17.316406 13.992188 17.167969 C 13.648438 17.023438 13.34375 16.8125 13.078125 16.539062 C 12.8125 16.269531 12.609375 15.953125 12.464844 15.597656 C 12.324219 15.242188 12.25 14.871094 12.25 14.488281 C 12.25 14.101562 12.324219 13.730469 12.464844 13.375 C 12.609375 13.019531 12.8125 12.707031 13.078125 12.433594 C 13.34375 12.164062 13.648438 11.953125 13.992188 11.804688 C 14.339844 11.65625 14.699219 11.585938 15.074219 11.585938 C 15.445312 11.585938 15.804688 11.65625 16.152344 11.804688 C 16.496094 11.953125 16.804688 12.164062 17.066406 12.433594 C 17.332031 12.707031 17.535156 13.019531 17.679688 13.375 C 17.820312 13.730469 17.894531 14.101562 17.894531 14.488281 Z M 17.894531 14.488281 "
+                    fill-opacity="1"
+                    fill-rule="nonzero"
+                  />
+                  <path
+                    fill="rgb(93.328857%, 93.328857%, 93.328857%)"
+                    d="M 17.1875 14.488281 C 17.1875 14.777344 17.136719 15.054688 17.027344 15.320312 C 16.921875 15.585938 16.765625 15.824219 16.570312 16.027344 C 16.371094 16.230469 16.140625 16.390625 15.882812 16.5 C 15.621094 16.609375 15.351562 16.664062 15.074219 16.664062 C 14.792969 16.664062 14.523438 16.609375 14.261719 16.5 C 14.003906 16.390625 13.773438 16.230469 13.578125 16.027344 C 13.378906 15.824219 13.226562 15.585938 13.117188 15.320312 C 13.011719 15.054688 12.957031 14.777344 12.957031 14.488281 C 12.957031 14.199219 13.011719 13.921875 13.117188 13.65625 C 13.226562 13.386719 13.378906 13.152344 13.578125 12.949219 C 13.773438 12.742188 14.003906 12.585938 14.261719 12.476562 C 14.523438 12.367188 14.792969 12.308594 15.074219 12.308594 C 15.351562 12.308594 15.621094 12.367188 15.882812 12.476562 C 16.140625 12.585938 16.371094 12.742188 16.570312 12.949219 C 16.765625 13.152344 16.921875 13.386719 17.027344 13.65625 C 17.136719 13.921875 17.1875 14.199219 17.1875 14.488281 Z M 17.1875 14.488281 "
+                    fill-opacity="1"
+                    fill-rule="nonzero"
+                  />
+                  <path
+                    fill="rgb(39.99939%, 39.99939%, 70.199585%)"
+                    d="M 15.074219 12.308594 L 15.175781 13.953125 L 15.882812 12.476562 L 15.367188 14.035156 L 16.570312 12.949219 L 15.511719 14.183594 L 17.027344 13.65625 L 15.589844 14.382812 L 17.1875 14.488281 L 15.589844 14.59375 L 17.027344 15.320312 L 15.511719 14.789062 L 16.570312 16.027344 L 15.367188 14.941406 L 15.882812 16.5 L 15.175781 15.023438 L 15.074219 16.664062 L 14.96875 15.023438 L 14.261719 16.5 L 14.777344 14.941406 L 13.574219 16.027344 L 14.632812 14.789062 L 13.117188 15.320312 L 14.554688 14.59375 L 12.957031 14.488281 L 14.554688 14.382812 L 13.117188 13.65625 L 14.632812 14.183594 L 13.574219 12.949219 L 14.777344 14.035156 L 14.261719 12.476562 L 14.96875 13.953125 Z M 15.074219 12.308594 "
+                    fill-opacity="1"
+                    fill-rule="nonzero"
+                  />
+                  <path
+                    fill="rgb(0%, 0%, 50.19989%)"
+                    d="M 15.777344 14.488281 C 15.777344 14.6875 15.707031 14.859375 15.570312 15 C 15.433594 15.140625 15.265625 15.214844 15.074219 15.214844 C 14.878906 15.214844 14.710938 15.140625 14.574219 15 C 14.4375 14.859375 14.367188 14.6875 14.367188 14.488281 C 14.367188 14.289062 14.4375 14.117188 14.574219 13.972656 C 14.710938 13.832031 14.878906 13.761719 15.074219 13.761719 C 15.265625 13.761719 15.433594 13.832031 15.570312 13.972656 C 15.707031 14.117188 15.777344 14.289062 15.777344 14.488281 Z M 15.777344 14.488281 "
+                    fill-opacity="1"
+                    fill-rule="nonzero"
+                  />
+                </svg>
               </div>
               <p className="mbr-description mbr-fonts-style mt-2 align-center display-7">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                egestas massa vel nulla gravida pulvinar. Pellentesque habitant
-                morbi tristique senectus&nbsp; fames ac turpis egestas.
+                {data.location}
               </p>
             </div>
           </div>

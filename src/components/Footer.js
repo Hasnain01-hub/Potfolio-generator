@@ -7,13 +7,17 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="single-footer-widget">
-              <a href="index-2.html" className="logo">
-                <img src="assets/ast/img/logo.png" alt="logo" />
-              </a>
+              <h5
+                style={{ color: "#fff" }}
+                className="mbr-section-title card-title2 mbr-fonts-style align-left m-0 display-5"
+              >
+                <strong>PortfolioG</strong>
+              </h5>
+              <br />
               <p>
-                Best solution for your it startup business,
-                consecteturadipiscing elit. Scelerisque amet odio velit, auctor
-                nam elit nulla.
+                Cloud based storage for your data backup just log in with your
+                gmail account and choose whatever template you want for your
+                business purpose.
               </p>
               <ul className="social-links">
                 <li>
@@ -31,11 +35,7 @@ const Footer = () => {
                     <i className="ri-linkedin-fill" />
                   </a>
                 </li>
-                <li>
-                  <a href="#/" target="_blank">
-                    <i className="ri-messenger-fill" />
-                  </a>
-                </li>
+
                 <li>
                   <a href="#/" target="_blank">
                     <i className="ri-github-fill" />
@@ -66,28 +66,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-2 col-md-3 col-sm-6">
-            <div className="single-footer-widget">
-              <h3>Support</h3>
-              <ul className="links-list">
-                <li>
-                  <a href="services.html">Services</a>
-                </li>
-                <li>
-                  <a href="contact.html">Support</a>
-                </li>
-                <li>
-                  <a href="privacy-policy.html">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="faq.html">FAQ's</a>
-                </li>
-                <li>
-                  <a href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+
           <div className="col-lg-2 col-md-3 col-sm-6">
             <div className="single-footer-widget">
               <h3>Useful Links</h3>

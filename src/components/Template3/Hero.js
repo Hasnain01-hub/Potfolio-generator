@@ -14,28 +14,6 @@ const Hero = ({ data }) => {
                 {" "}
                 {data.profession}
               </p>
-              <div className="align-wrap align-left">
-                <div className="icons-wrap">
-                  <div className="icon-wrap">
-                    <span className="mbr-iconfont mbrib-apple" />
-                    <h3 className="icon-title mbr-bold mbr-fonts-style display-7">
-                      EAT
-                    </h3>
-                  </div>
-                  <div className="icon-wrap">
-                    <span className="mbr-iconfont mbrib-globe" />
-                    <h3 className="icon-title mbr-bold mbr-fonts-style display-7">
-                      PLAY
-                    </h3>
-                  </div>
-                  <div className="icon-wrap">
-                    <span className="mbr-iconfont mbrib-github" />
-                    <h3 className="icon-title mbr-bold mbr-fonts-style display-7">
-                      BRUSH
-                    </h3>
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="col-md-12 col-lg-7 img-col">
               <div className="mbr-figure">
