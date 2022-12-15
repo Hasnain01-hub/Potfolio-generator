@@ -61,7 +61,7 @@ const MainSection = ({ data }) => {
                     netus et malesuada fames ac turpis netus egestas.
                   </p>
                   <h5 className="link mbr-semibold mbr-fonts-style display-4">
-                    <a href="#" className="text-black">
+                    <a href="/#" className="text-black">
                       VIEW MORE
                     </a>
                   </h5>
@@ -123,7 +123,7 @@ const MainSection = ({ data }) => {
                     netus et malesuada fames ac turpis netus egestas.{" "}
                   </p>
                   <h5 className="link mbr-semibold mbr-fonts-style display-4">
-                    <a href="#" className="text-black">
+                    <a href="/#" className="text-black">
                       VIEW MORE
                     </a>
                   </h5>
@@ -185,7 +185,7 @@ const MainSection = ({ data }) => {
                     netus et malesuada fames ac turpis netus egestas.{" "}
                   </p>
                   <h5 className="link mbr-semibold mbr-fonts-style display-4">
-                    <a href="#" className="text-black">
+                    <a href="/#" className="text-black">
                       VIEW MORE
                     </a>
                   </h5>
@@ -247,7 +247,7 @@ const MainSection = ({ data }) => {
                     netus et malesuada fames ac turpis netus egestas.{" "}
                   </p>
                   <h5 className="link mbr-semibold mbr-fonts-style display-4">
-                    <a href="#" className="text-black">
+                    <a href="/#" className="text-black">
                       VIEW MORE
                     </a>
                   </h5>
@@ -345,7 +345,11 @@ const MainSection = ({ data }) => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src={data.images[0]["url"]} alt="" title />
+                <img
+                  src={data.images[0]["url"]}
+                  alt="User Uploaded File"
+                  title
+                />
                 <div className="wrapper">
                   <p className="mbr-text align-center mbr-semibold mbr-white mbr-fonts-style display-4">
                     {data.name}
@@ -358,7 +362,11 @@ const MainSection = ({ data }) => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src={data.images[1]["url"]} alt="" title />
+                <img
+                  src={data.images[1]["url"]}
+                  alt="User Uploaded File"
+                  title
+                />
                 <div className="wrapper">
                   <p className="mbr-text align-center mbr-semibold mbr-white mbr-fonts-style display-4">
                     {data.name}
@@ -371,7 +379,11 @@ const MainSection = ({ data }) => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="card-wrapper">
-                <img src={data.images[2]["url"]} alt="" title />
+                <img
+                  src={data.images[2]["url"]}
+                  alt="User Uploaded File"
+                  title
+                />
                 <div className="wrapper">
                   <p className="mbr-text align-center mbr-semibold mbr-white mbr-fonts-style display-4">
                     {data.name}
@@ -393,7 +405,7 @@ const MainSection = ({ data }) => {
           <div className="row">
             <div className="col-md-7 pb-5">
               <h2 className="align-left mbr-bold mbr-fonts-style display-2">
-                <a href="#">
+                <a href="/#">
                   <strong>Happy to welcome you</strong>
                 </a>
                 to our circle of friends
@@ -404,6 +416,7 @@ const MainSection = ({ data }) => {
                 <img
                   className="bone"
                   src="/assets/temp3/assets/images/bone.png"
+                  alt="User Uploaded File"
                 />
                 <h3 className="mbr-white align-left mbr-bold mbr-fonts-style display-5">
                   Marketing Requirements
@@ -1089,7 +1102,7 @@ const MainSection = ({ data }) => {
           <div className="row">
             <div className="col-md-12 content py-4 col-lg-5 ">
               <h1 className="mbr-section-title align-left mbr-bold pb-2 mbr-fonts-style display-2">
-                <a href="#">
+                <a href="/#">
                   <strong>Marianne</strong>
                 </a>
                 <br />
@@ -1159,7 +1172,7 @@ const MainSection = ({ data }) => {
             <div className="col-md-12 content py-4 col-lg-5 ">
               <h1 className="mbr-section-title align-left mbr-bold pb-2 mbr-fonts-style display-2">
                 <strong>
-                  <a href="#">
+                  <a href="/#">
                     <b>{data.name.split(" ")[0]}</b>
                   </a>{" "}
                 </strong>

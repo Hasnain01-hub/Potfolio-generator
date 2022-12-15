@@ -433,7 +433,7 @@ const MainSection = ({ data }) => {
                     alt="Mobirise"
                   />
                   <div className="icon-wrap">
-                    <a className="text-primary" href="#">
+                    <a className="text-primary" href="/#">
                       <span className="mbr-iconfont socicon-youtube socicon" />
                     </a>
                   </div>
@@ -448,6 +448,7 @@ const MainSection = ({ data }) => {
               <div className="modalWindow-video-container">
                 <div className="modalWindow-video">
                   <iframe
+                    title="Frame"
                     width="100%"
                     height="100%"
                     frameBorder={0}
@@ -460,6 +461,7 @@ const MainSection = ({ data }) => {
                   role="button"
                   data-dismiss="modal"
                   data-bs-dismiss="modal"
+                  href="/#"
                 >
                   <span
                     aria-hidden="true"
@@ -898,6 +900,7 @@ const MainSection = ({ data }) => {
           </div>
           <div className="google-map">
             <iframe
+              title="Frame"
               frameBorder={0}
               style={{ border: 0 }}
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk89J4FSunMF33ruMVWJaJht_Ro0kvoXs&q=350%205th%20Ave,%20New%20York,%20NY%2010118"

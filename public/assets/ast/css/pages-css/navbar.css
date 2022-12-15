@@ -695,14 +695,6 @@
     padding-top: 11px;
     color: var(--whiteColor);
   }
-  .pakap-responsive-nav .mean-container a.meanmenu-reveal span {
-    top: 8px;
-    height: 4px;
-    margin-top: -7px;
-    border-radius: 3px;
-    position: relative;
-    background: var(--whiteColor);
-  }
   .pakap-responsive-nav .mean-container .mean-bar {
     background: transparent;
     position: absolute;
@@ -948,4 +940,4 @@
     padding-right: 100px;
   }
 }
-/*# sourceMappingURL=navbar.css.map */
+/*# sourceMappingURL=navbar

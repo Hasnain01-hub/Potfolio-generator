@@ -693,25 +693,19 @@
             !t.dataSM("ie-shim") &&
             t.dataSM(
               "ie-shim",
-              $("<iframe/>")
-                .attr({ src: "javascript:0", tabindex: -9 })
-                .css({
-                  position: "absolute",
-                  top: "auto",
-                  left: "0",
-                  opacity: 0,
-                  border: "0",
-                })
+              $("<iframe/>").attr({ src: "javascript:0", tabindex: -9 }).css({
+                position: "absolute",
+                top: "auto",
+                left: "0",
+                opacity: 0,
+                border: "0",
+              })
             );
         },
         menuInit: function (t) {
           if (!t.dataSM("in-mega")) {
             t.hasClass("mega-menu") && t.find("ul").dataSM("in-mega", !0);
-            for (
-              var e = 2, i = t[0];
-              (i = i.parentNode.parentNode) != this.$root[0];
-
-            )
+            for (var e = 2, i = t[0]; (i = i.parentNode) != this.$root[0]; )
               e++;
             var s = t.prevAll("a").eq(-1);
             s.length || (s = t.prevAll().find("a").eq(-1)),
@@ -889,15 +883,13 @@
           t.css({ top: "auto", left: "0", marginLeft: e, marginTop: i - m }),
             this.menuIframeShim(t),
             t.dataSM("ie-shim") &&
-              t
-                .dataSM("ie-shim")
-                .css({
-                  zIndex: t.css("z-index"),
-                  width: r,
-                  height: h,
-                  marginLeft: e,
-                  marginTop: i - m,
-                });
+              t.dataSM("ie-shim").css({
+                zIndex: t.css("z-index"),
+                width: r,
+                height: h,
+                marginLeft: e,
+                marginTop: i - m,
+              });
         },
         menuScroll: function (t, e, i) {
           var s,
@@ -925,16 +917,14 @@
                 : Math.abs(n - o.y) > s
                 ? o.y + (o.up ? s : -s)
                 : n),
-            t
-              .add(t.dataSM("ie-shim"))
-              .css(
-                this.cssTransforms3d
-                  ? {
-                      "-webkit-transform": "translate3d(0, " + o.y + "px, 0)",
-                      transform: "translate3d(0, " + o.y + "px, 0)",
-                    }
-                  : { marginTop: o.y }
-              ),
+            t.add(t.dataSM("ie-shim")).css(
+              this.cssTransforms3d
+                ? {
+                    "-webkit-transform": "translate3d(0, " + o.y + "px, 0)",
+                    transform: "translate3d(0, " + o.y + "px, 0)",
+                  }
+                : { marginTop: o.y }
+            ),
             mouse &&
               ((o.up && o.y > o.downEnd) || (!o.up && o.y < o.upEnd)) &&
               a.eq(o.up ? 1 : 0).show(),
@@ -16216,13 +16206,11 @@ var Cursor = function (a) {
             c = Se.height() - r;
           return (
             p(s) &&
-              (wo
-                .addClass(yt)
-                .css({
-                  width: s,
-                  minWidth: Oo.minwidth || 0,
-                  maxWidth: Oo.maxwidth || 99999,
-                }),
+              (wo.addClass(yt).css({
+                width: s,
+                minWidth: Oo.minwidth || 0,
+                maxWidth: Oo.maxwidth || 99999,
+              }),
               (s = Oo.W = Oo.w = wo.width()),
               (Oo.nw = (In && m(i.navwidth, s)) || s),
               i.glimpse && (Oo.w -= Math.round(2 * (m(i.glimpse, s) || 0))),

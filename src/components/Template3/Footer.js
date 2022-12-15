@@ -23,6 +23,7 @@ const Footer = ({ data }) => {
               </svg>
               <div className="google-map">
                 <iframe
+                  title="Frame"
                   frameBorder={0}
                   style={{ border: 0 }}
                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAEIpgj38KyLFELm2bK9Y7krBkz1K-cMq8&q=place_id:ChIJn6wOs6lZwokRLKy1iqRcoKw"

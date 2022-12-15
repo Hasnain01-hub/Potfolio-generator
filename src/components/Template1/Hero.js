@@ -3,17 +3,20 @@ import "./hero.css";
 const Hero = ({ data }) => {
   return (
     <>
-      <div className="page-banner home-banner">
+      <div
+        className="page-banner home-banner"
+        style={{ position: "relative", top: "100px" }}
+      >
         <div className="container h-100">
           <div className="row align-items-center h-100">
             <div className="col-lg-6 py-3 wow fadeInUp">
               <h1 className="mb-4 capitalize">{data.name}</h1>
               <p className="text-lg mb-5">{data.profession}</p>
 
-              <a href="#" className="text-secondary  btn-outline border btn ">
+              <a href="/#" className="text-secondary  btn-outline border btn ">
                 More Info
               </a>
-              <a href="#" className="btn btn-primary btn-split ml-2">
+              <a href="/#" className="btn btn-primary btn-split ml-2">
                 Watch Video{" "}
                 <div className="fab">
                   <span className="mai-play"></span>
