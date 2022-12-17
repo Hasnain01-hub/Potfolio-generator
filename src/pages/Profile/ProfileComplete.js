@@ -1,4 +1,6 @@
 import "./ProfileComplete.css";
+import { motion } from "framer-motion/dist/framer-motion";
+
 import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
@@ -103,34 +105,40 @@ const ProfileComplete = () => {
 
   return (
     <>
-      <Header />
-      <div className="new-app-main-banner-wrap-area">
-        <div className="d-table">
-          <div className="d-table-cell">
-            <div className="container">
-              <div className="signin-form">
-                <h2 style={{ fontWeight: "bold" }}>Create Portfolio</h2>
-                <ProfileCompleteForm
-                  loading={loading}
-                  values={values}
-                  setValues={setValues}
-                  setLoading={setLoading}
-                  handleChange={handleChange}
-                  handleSubmit={handleSubmit}
-                  handleAddForm={handleAddForm}
-                  handleRemoveForm={handleRemoveForm}
-                  handleForm={handleForm}
-                  achievement={achievement}
-                />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Header />
+        <div className="new-app-main-banner-wrap-area">
+          <div className="d-table">
+            <div className="d-table-cell">
+              <div className="container">
+                <div className="signin-form">
+                  <h2 style={{ fontWeight: "bold" }}>Create Portfolio</h2>
+                  <ProfileCompleteForm
+                    loading={loading}
+                    values={values}
+                    setValues={setValues}
+                    setLoading={setLoading}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    handleAddForm={handleAddForm}
+                    handleRemoveForm={handleRemoveForm}
+                    handleForm={handleForm}
+                    achievement={achievement}
+                  />
+                </div>
+                <Toaster />
               </div>
-              <Toaster />
             </div>
           </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <Footer />
+        <br />
+        <br />
+        <Footer />
+      </motion.div>
     </>
   );
 };

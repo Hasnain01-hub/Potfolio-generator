@@ -32,12 +32,18 @@ const UploadFile = ({ loading, values, setValues, setLoading }) => {
   };
 
   const fileUploadAndResize = (e) => {
+    // get the files from the event
     let files = e.target.files;
+    // init an array for all the files
     let allUploadedFiles = values.images;
+    // if there are files
     if (files) {
       console.log(files);
+      // set the loading state to true
       setLoading(true);
+      // loop over the files
       for (let i = 0; i < files.length; i++) {
+        // resize the image using Resizer
         Resizer.imageFileResizer(
           files[i],
           720,
@@ -46,13 +52,18 @@ const UploadFile = ({ loading, values, setValues, setLoading }) => {
           100,
           0,
           (uri) => {
+            // upload the image to the server
             upload(uri)
               .then((res) => {
+                // set loading to false
                 setLoading(false);
+                // push the image to the array
                 allUploadedFiles.push(res);
+                // set the images state to the array
                 setValues({ ...values, images: allUploadedFiles });
               })
               .catch((err) => {
+                // set loading to false
                 setLoading(false);
               });
           },
@@ -61,6 +72,7 @@ const UploadFile = ({ loading, values, setValues, setLoading }) => {
       }
     }
   };
+
   const handleImageRemove = (public_id) => {
     setLoading(true);
     remove(public_id)

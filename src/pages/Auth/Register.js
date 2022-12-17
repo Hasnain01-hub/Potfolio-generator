@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion/dist/framer-motion";
+
 import toast, { Toaster } from "react-hot-toast";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
@@ -13,7 +15,7 @@ function Register() {
   const [password, setpassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
   const { user } = useSelector((state) => ({ ...state }));
-  
+
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
@@ -36,7 +38,7 @@ function Register() {
       const user = res.user;
       const idTokenResult = await user.getIdTokenResult();
       var separatedString;
-      
+
       await db
         .collection("users")
         .doc(user.email)
@@ -80,18 +82,24 @@ function Register() {
 
   return (
     <>
-      <Header />
-      <RegisterForm
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setpassword={setpassword}
-        registerWithEmailAndPassword={registerWithEmailAndPassword}
-        togglePasswordVisiblity={togglePasswordVisiblity}
-        passwordShown={passwordShown}
-      />
-      <Toaster />
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Header />
+        <RegisterForm
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setpassword={setpassword}
+          registerWithEmailAndPassword={registerWithEmailAndPassword}
+          togglePasswordVisiblity={togglePasswordVisiblity}
+          passwordShown={passwordShown}
+        />
+        <Toaster />
+        <Footer />
+      </motion.div>
     </>
   );
 }

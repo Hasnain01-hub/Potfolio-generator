@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion/dist/framer-motion";
+
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { GridLoader } from "react-spinners";
@@ -51,106 +53,112 @@ const Template3 = () => {
 
   return (
     <>
-      {loading === false ? (
-        <>
-          <Helmet>
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        {loading === false ? (
+          <>
+            <Helmet>
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/web/assets/mobirise-icons2/mobirise2.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/web/assets/mobirise-icons/mobirise-icons.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/tether/tether.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/bootstrap/css/bootstrap.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/bootstrap/css/bootstrap-grid.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/bootstrap/css/bootstrap-reboot.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/as-pie-progress/css/progress.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/dropdown/css/style.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/formstyler/jquery.formstyler.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/formstyler/jquery.formstyler.theme.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/datepicker/jquery.datetimepicker.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/socicon/css/styles.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/theme/css/style.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/formoid-css/recaptcha.css"
+              />
+              <link
+                rel="preload"
+                as="style"
+                href="/assets/temp3/assets/mobirise/css/mbr-additional.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/assets/temp3/assets/mobirise/css/mbr-additional.css"
+                type="text/css"
+              />
+            </Helmet>
+            <Hero data={data} />
+            <MainSection data={data} />
+            <Footer data={data} />
+          </>
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "90vh",
+              flexDirection: "column",
+              gap: "10px",
+            }}
+          >
+            <GridLoader
+              color={randomColor}
+              loading={loading}
+              cssOverride={override}
+              size={75}
+              aria-label="Loading Spinner"
+              data-testid="loader"
             />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/web/assets/mobirise-icons2/mobirise2.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/web/assets/mobirise-icons/mobirise-icons.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/tether/tether.min.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/bootstrap/css/bootstrap.min.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/bootstrap/css/bootstrap-grid.min.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/bootstrap/css/bootstrap-reboot.min.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/as-pie-progress/css/progress.min.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/dropdown/css/style.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/formstyler/jquery.formstyler.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/formstyler/jquery.formstyler.theme.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/datepicker/jquery.datetimepicker.min.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/socicon/css/styles.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/theme/css/style.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/formoid-css/recaptcha.css"
-            />
-            <link
-              rel="preload"
-              as="style"
-              href="/assets/temp3/assets/mobirise/css/mbr-additional.css"
-            />
-            <link
-              rel="stylesheet"
-              href="/assets/temp3/assets/mobirise/css/mbr-additional.css"
-              type="text/css"
-            />
-          </Helmet>
-          <Hero data={data} />
-          <MainSection data={data} />
-          <Footer data={data} />
-        </>
-      ) : (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "90vh",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <GridLoader
-            color={randomColor}
-            loading={loading}
-            cssOverride={override}
-            size={75}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-          <h2>Loading Your Template! Please Be Patient</h2>
-        </div>
-      )}
+            <h2>Loading Your Template! Please Be Patient</h2>
+          </div>
+        )}
+      </motion.div>
     </>
   );
 };

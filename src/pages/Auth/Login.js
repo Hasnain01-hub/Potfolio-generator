@@ -1,4 +1,6 @@
 import firebase from "firebase/compat/app";
+import { motion } from "framer-motion/dist/framer-motion";
+
 import { useHistory } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -131,20 +133,26 @@ const Login = () => {
 
   return (
     <>
-      <Header />
-      <LoginForm
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        signInWithEmailAndPassword={signInWithEmailAndPassword}
-        signInWithGoogle={signInWithGoogle}
-        passwordShown={passwordShown}
-        togglePasswordVisiblity={togglePasswordVisiblity}
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Header />
+        <LoginForm
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          signInWithEmailAndPassword={signInWithEmailAndPassword}
+          signInWithGoogle={signInWithGoogle}
+          passwordShown={passwordShown}
+          togglePasswordVisiblity={togglePasswordVisiblity}
+        />
 
-      <Toaster />
-      <Footer />
+        <Toaster />
+        <Footer />
+      </motion.div>
     </>
   );
 };

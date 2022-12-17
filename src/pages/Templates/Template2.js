@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion/dist/framer-motion";
+
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import GridLoader from "react-spinners/GridLoader";
 import dummyData from "../../assets/data.json";
@@ -49,49 +51,55 @@ const Template2 = () => {
 
   return (
     <>
-      {loading === false ? (
-        <>
-          <div>
-            <section
-              data-bs-version="5.1"
-              className="menu menu1 cid-tdxNLfJYL6"
-              once="menu"
-              id="menu01-1"
-            >
-              <NavBar data={data} />
-            </section>
-            <section
-              data-bs-version="5.1"
-              className="header3 cid-tdxNMUdm2F"
-              id="header03-2"
-            >
-              <Hero data={data} />
-            </section>
-            <MainSection data={data} />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        {loading === false ? (
+          <>
+            <div>
+              <section
+                data-bs-version="5.1"
+                className="menu menu1 cid-tdxNLfJYL6"
+                once="menu"
+                id="menu01-1"
+              >
+                <NavBar data={data} />
+              </section>
+              <section
+                data-bs-version="5.1"
+                className="header3 cid-tdxNMUdm2F"
+                id="header03-2"
+              >
+                <Hero data={data} />
+              </section>
+              <MainSection data={data} />
+            </div>
+          </>
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "90vh",
+              flexDirection: "column",
+              gap: "10px",
+            }}
+          >
+            <GridLoader
+              color={randomColor}
+              loading={loading}
+              cssOverride={override}
+              size={75}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+            <h2>Loading Your Template! Please Be Patient</h2>
           </div>
-        </>
-      ) : (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "90vh",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <GridLoader
-            color={randomColor}
-            loading={loading}
-            cssOverride={override}
-            size={75}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-          <h2>Loading Your Template! Please Be Patient</h2>
-        </div>
-      )}
+        )}
+      </motion.div>
     </>
   );
 };
