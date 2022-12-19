@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./image.css";
 const Hero = ({ data }) => {
   return (
     <>
@@ -16,8 +16,20 @@ const Hero = ({ data }) => {
               </p>
             </div>
             <div className="col-md-12 col-lg-7 img-col">
-              <div className="mbr-figure">
-                <img src="/assets/temp3/assets/images/07.png" alt="Mobirise" />
+              <div className="splatted " style={{ margin: "0 auto" }}>
+                <div
+                  class="splatted__image"
+                  style={{
+                    "--hue": "110",
+                    "--hover-rotate": "-10",
+                    "--active-rotate": "-30",
+                    "--hover-scale": "1.15",
+                    "--active-scale": "0.75",
+                    backgroundImage: "url(" + data.images[0]["url"] + ")",
+                  }}
+                >
+                  <img src={data.images[0]["url"]} alt="Mobirise" />
+                </div>
               </div>
             </div>
           </div>

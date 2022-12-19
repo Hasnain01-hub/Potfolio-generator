@@ -1,4 +1,7 @@
 import React from "react";
+import Lottie from "lottie-react";
+import aboutus from "../../assets/aboutus.json";
+import achievement from "../../assets/achievement.json";
 
 const MainSection = ({ data }) => {
   return (
@@ -262,7 +265,8 @@ const MainSection = ({ data }) => {
           <div className="row">
             <div className="col-md-12 col-lg-6 img-col">
               <div className="mbr-figure">
-                <img src="/assets/temp3/assets/images/08.png" alt="Mobirise" />
+                {/* <img src="/assets/temp3/assets/images/08.png" alt="Mobirise" /> */}
+                <Lottie animationData={aboutus} loop={true} />
               </div>
             </div>
             <div className="col-md-12 content py-4 col-lg-6">
@@ -1171,7 +1175,8 @@ const MainSection = ({ data }) => {
           <div className="row">
             <div className="col-md-12 col-lg-7 img-col">
               <div className="mbr-figure">
-                <img src="/assets/temp3/assets/images/07.png" alt="Mobirise" />
+                {/* <img src="/assets/temp3/assets/images/07.png" alt="Mobirise" /> */}
+                <Lottie animationData={achievement} loop={true} />
               </div>
             </div>
             <div className="col-md-12 content py-4 col-lg-5 ">

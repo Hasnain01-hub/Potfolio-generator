@@ -1,19 +1,20 @@
 import { GridLoader } from "react-spinners";
 import { motion } from "framer-motion/dist/framer-motion";
 
-import { React, Suspense, useEffect } from "react";
+import { React, Suspense, lazy, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { auth, db } from "./helpers/Firebase";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Auth/Login";
-import Register from "./pages/Auth/Register";
-import ProfileComplete from "./pages/Profile/ProfileComplete";
-import Template1 from "./pages/Templates/Template1";
-import { toast } from "react-hot-toast";
-import Template2 from "./pages/Templates/Template2";
-import Template3 from "./pages/Templates/Template3";
 
+import { toast } from "react-hot-toast";
+
+const Login = lazy(() => import("./pages/Auth/Login"));
+const Template3 = lazy(() => import("./pages/Templates/Template3"));
+const Template2 = lazy(() => import("./pages/Templates/Template2"));
+const ProfileComplete = lazy(() => import("./pages/Profile/ProfileComplete"));
+const Register = lazy(() => import("./pages/Auth/Register"));
+const Template1 = lazy(() => import("./pages/Templates/Template1"));
+const Home = lazy(() => import("./pages/Home/Home"));
 const override = {
   display: "block",
   margin: "0 auto",
