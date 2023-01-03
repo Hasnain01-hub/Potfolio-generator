@@ -1187,7 +1187,9 @@ const MainSection = ({ data }) => {
                 return (
                   <p className="align-left mbr-regular pb-3 mbr-fonts-style display-7">
                     {index + 1}.&nbsp;
-                    {val.data}
+                    {val.AchievementName}
+                    <br />
+                    {val.About}
                   </p>
                 );
               })}

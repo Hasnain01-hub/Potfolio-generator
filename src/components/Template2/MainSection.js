@@ -243,10 +243,12 @@ const MainSection = ({ data }) => {
                     <div className="col-lg-7">
                       <div className="article-wrapper align-left">
                         <h3 className="mbr-section-title mbr-fonts-style mt-3 display-5">
-                          <strong>{index + 1}.</strong>
+                          <strong>
+                            {index + 1}. {card.AchievementName}
+                          </strong>
                         </h3>
                         <h4 className="mbr-section-subtitle mbr-fonts-style mt-1 display-7">
-                          {card.data}
+                          {card.About}
                         </h4>
                       </div>
                     </div>

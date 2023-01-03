@@ -33,10 +33,10 @@ const About = ({ data }) => {
           <div className="row">
             <div className="col-sm-9">
               <h3>Achievenemt</h3>
-              {data.achievenemt.slice(0,2).map((value, index) => {
+              {data.achievenemt.slice(0, 1).map((value, index) => {
                 return (
                   <p className="lead">
-                    {index + 1}.&nbsp;{value.data}
+                    {index + 1}.&nbsp;{value.About}
                   </p>
                 );
               })}

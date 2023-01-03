@@ -10,14 +10,15 @@ const Header = () => {
   let history = useHistory();
   const dispatch = useDispatch();
   const logout = () => {
-    auth.signOut();
-    toast.success("Logout Successfully");
-    dispatch({
-      type: "USERS_LOGOUT",
-      payload: {},
+    auth.signOut().then(() => {
+      toast.success("Logout Successfully");
+      dispatch({
+        type: "USERS_LOGOUT",
+        payload: {},
+      });
+      history.push("/");
+      window.location.reload();
     });
-    history.push("/");
-    window.location.reload();
   };
 
   return (
@@ -26,7 +27,7 @@ const Header = () => {
         <div className="container">
           <div className="pakap-responsive-menu">
             <div className="logo">
-              <Link to="/">
+              <Link style={{ cursor: "pointer" }} to="/">
                 <b>
                   {" "}
                   <h1 style={{ fontWeight: " bold" }}>Portfolio Generator</h1>
@@ -118,11 +119,11 @@ const Header = () => {
                 ) : (
                   <></>
                 )}
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link to="/" className="nav-link">
                     Pricing
                   </Link>
-                </li>
+                </li> */}
                 {!user ? (
                   <li className="nav-item">
                     <Link to="/login" className="nav-link">
