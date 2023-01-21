@@ -23,8 +23,8 @@
 .splatted__image {
   height: 100%;
   width: 100%;
-  clip-path: var(--splodge, 2ch);
-  transition: clip-path 0.2s, transform 0.2s;
+  clippath: var(--splodge, 2ch);
+  transition: clipPath 0.2s, transform 0.2s;
   transform: rotate(calc(var(--rotate, 0) * 1deg)) scale(var(--scale, 1));
   position: relative;
 

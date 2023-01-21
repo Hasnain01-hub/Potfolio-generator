@@ -43,9 +43,13 @@ function Register() {
         .collection("users")
         .doc(user.email)
         .set({
-          name: user.email.split("@")[0],
+          auth_name: user.displayName ?? user.email.split("@")[0],
+          profile_url: user.photoURL,
           role: "user",
-          email: user.email,
+          auth_email: user.email,
+          prof_email: null,
+          prof_name: null,
+          past_email: [user.email],
         })
         .then(async () => {
           await db
@@ -63,8 +67,9 @@ function Register() {
           dispatch({
             type: "USERS_LOGGED",
             payload: {
-              name: user.email.split("@")[0],
-              email: user.email,
+              auth_name: user.displayName ?? user.email.split("@")[0],
+              profile_url: user.photoURL,
+              auth_email: user.email,
               token: idTokenResult.token,
               role: separatedString.role,
               id: user.email,

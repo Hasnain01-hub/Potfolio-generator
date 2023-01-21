@@ -21,6 +21,7 @@ var randomColor = "#000000".replace(/0/g, function () {
 });
 
 const Template2 = () => {
+  const [instagram, setinstagram] = React.useState({});
   const [data, setData] = React.useState();
 
   const id = useParams();
@@ -33,8 +34,20 @@ const Template2 = () => {
       };
       loaddata()
         .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
+          querySnapshot.forEach(async (doc) => {
             setData(doc.data());
+            let headersList = {
+              Accept: "application/json",
+              "Content-Type": "application/json;charset=UTF-8",
+            };
+            const insta = await fetch(
+              `https://www.instagram.com/${
+                doc.data().instagram
+              }/?__a=1&__d=dis`,
+              { method: "GET", headers: headersList }
+            );
+            setinstagram(insta.json());
+            console.log();
             setLoading(true);
             // if (doc.data() == undefined) {
             //   setData(userData);

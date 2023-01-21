@@ -544,7 +544,7 @@ Profile Authentication Area CSS
   }
   .signin-form {
     max-width: 100%;
-    text-align: center;
+    /* text-align: center; */
     padding: 20px 15px;
   }
   .signin-form h2 {

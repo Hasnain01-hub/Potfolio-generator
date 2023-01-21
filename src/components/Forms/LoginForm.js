@@ -15,7 +15,10 @@ const LoginForm = ({
     <div className="profile-authentication-area">
       <div className="d-table">
         <div className="d-table-cell">
-          <div className="box-width" style={{ width: "50vw", margin: "0 auto" }}>
+          <div
+            className="box-width"
+            style={{ width: "50vw", margin: "0 auto" }}
+          >
             <div className="signin-form">
               <h2 style={{ fontWeight: "bold" }}>Sign In</h2>
               <form onSubmit={signInWithEmailAndPassword}>
@@ -62,7 +65,7 @@ const LoginForm = ({
                 </div>
                 <div className="row align-items-center"></div>
                 <button
-                  style={{ width: "40%", margin: "0 auto" }}
+                  style={{ margin: "0 auto" }}
                   type="submit"
                   onClick={signInWithEmailAndPassword}
                 >
@@ -75,7 +78,7 @@ const LoginForm = ({
               </form>
               <div className="sign-in-with-button">
                 <button
-                  style={{ width: "40%", margin: "0 auto" }}
+                  style={{ margin: "0 auto" }}
                   type="button"
                   onClick={signInWithGoogle}
                 >

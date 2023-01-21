@@ -104,13 +104,16 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-                {/* <li className="nav-item">
-                  <Link to="/" className="nav-link">
-                    Contact
-                  </Link>
-                </li> */}
-
                 {user ? (
+                  <li className="nav-item">
+                    <Link to={`/myaccount`} className="nav-link">
+                      My account
+                    </Link>
+                  </li>
+                ) : (
+                  <></>
+                )}
+                {/* {user ? (
                   <li className="nav-item">
                     <Link className="nav-link" to="/profilecomplete">
                       Create Portfolio
@@ -118,7 +121,7 @@ const Header = () => {
                   </li>
                 ) : (
                   <></>
-                )}
+                )} */}
                 {/* <li className="nav-item">
                   <Link to="/" className="nav-link">
                     Pricing

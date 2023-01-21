@@ -54,9 +54,13 @@ const Login = () => {
               .collection("users")
               .doc(user.email)
               .set({
-                name: user.email.split("@")[0],
-                email: user.email,
+                auth_name: user.displayName ?? user.email.split("@")[0],
+                auth_email: user.email,
+                profile_url: user.photoURL,
                 role: "user",
+                prof_email: null,
+                prof_name: null,
+                past_email: [user.email],
               })
               .catch((error) => {
                 toast.error(error.message);
@@ -77,9 +81,9 @@ const Login = () => {
           dispatch({
             type: "USERS_LOGGED",
             payload: {
-              name: user.email.split("@")[0],
-              email: user.email,
-
+              auth_name: user.displayName ?? user.email.split("@")[0],
+              profile_url: user.photoURL,
+              auth_email: user.email,
               token: idTokenResult.token,
               role: await separatedString1.role,
               id: user.email,
@@ -107,17 +111,13 @@ const Login = () => {
           console.log(error);
         });
       var obj = JSON.stringify(separatedString.role);
-      console.log("obj us hee", obj);
-      const ad = "";
-
-      console.log("ad is here", ad);
 
       await auth.signInWithEmailAndPassword(email, password).then((res) => {
         dispatch({
           type: "USERS_LOGGED",
           payload: {
-            name: email.split("@")[0],
-            email: email,
+            auth_name: email.split("@")[0],
+            auth_email: email,
             role: obj,
             id: email,
           },

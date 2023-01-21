@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import { auth, db } from "./helpers/Firebase";
 
 import { toast } from "react-hot-toast";
+import Myaccount from "./components/Account/Myaccount";
 
 const Login = lazy(() => import("./pages/Auth/Login"));
 const Template3 = lazy(() => import("./pages/Templates/Template3"));
@@ -43,11 +44,12 @@ function App() {
               dispatch({
                 type: "USERS_LOGGED",
                 payload: {
-                  name: separatedString1.name,
-                  email: separatedString1.email,
+                  auth_name: separatedString1.auth_name,
+                  auth_email: separatedString1.auth_email,
                   token: idTokenResult.token,
                   userid: separatedString1.userid ?? false,
                   role: separatedString1.role,
+                  profile_url: separatedString1.profile_url,
                   id: separatedString1.email,
                 },
               });
@@ -98,6 +100,7 @@ function App() {
             <Route exact path="/template1/:id" component={Template1} />
             <Route exact path="/template2/:id" component={Template2} />
             <Route exact path="/template3/:id" component={Template3} />
+            <Route exact path="/myaccount" component={Myaccount} />
           </Switch>
           <div className="go-top">
             <i className="ri-arrow-up-s-line" />
